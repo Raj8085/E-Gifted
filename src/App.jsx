@@ -67,65 +67,128 @@
 import "../src/App.css";
 import Navbar from "./components/navbar/navbar";
 import GiftCards from "./components/gifts/giftCards";
-import HeroSection from "./HeroSection/heroSection";
-import Footer from "./Footer/footer";
+import HeroSection from "./components/HeroSection/heroSection";
+import Footer from "./components/Footer/footer";
+import GiftComponent from "./components/GiftReward/card";
+// import BottomGridComponent from "./components/SecondBottom/secondBottom";
+import SecondBottomGifter from "./components/SecondBottom/bottomCard";
+import RatingFeature from "./components/SecondBottom/ratingFeature";
+import SignIn from "./components/UserCredential/signIn";
+
+
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Rewards from "./components/BuyForBussiness/buyForBusiness";
+import FeatureComparison from "./components/BuyForBussiness/featureComparison";
+import {VisaRewards, HomeVisaRewards, VisaRewardsApi, VisaRewardsReverse } from "./components/BuyForBussiness/VisaRewards";
+import BuyCryptoCards, { BuyCrypto} from "./components/BuyForCrypto/buyForCrypto";
+import GiftCardPayment, { TabLayout } from "./components/PaymentPage/buyGift";
+// import SignIn from "./components/UserCredential/signIn.jsx"; 
 
 // import { Input } from "@/components/ui/input"
-const generateSnowflakes = (num) => {
-  const snowflakes = [];
-  for (let i = 0; i < num; i++) {
-    // Random values for each snowflake's movement
-    const moveX1 = `${Math.random() * 100 - 50}vw`;
-    const moveY1 = `${Math.random() * 100 - 50}vh`;
-    const moveX2 = `${Math.random() * 100 - 50}vw`;
-    const moveY2 = `${Math.random() * 100 - 50}vh`;
-    const moveX3 = `${Math.random() * 100 - 50}vw`;
-    const moveY3 = `${Math.random() * 100 - 50}vh`;
-    const moveX4 = `${Math.random() * 100 - 50}vw`;
-    const moveY4 = `${Math.random() * 100 - 50}vh`;
-    const duration = Math.random() * 10 + 10; // Random duration between 5s and 10s
-    const delay = Math.random() * 3; // Random delay between 0s and 3s
 
-    snowflakes.push(
-      <div
-        key={i}
-        className="snowflake"
-        style={{
-          "--moveX1": moveX1,
-          "--moveY1": moveY1,
-          "--moveX2": moveX2,
-          "--moveY2": moveY2,
-          "--moveX3": moveX3,
-          "--moveY3": moveY3,
-          "--moveX4": moveX4,
-          "--moveY4": moveY4,
-          animationDuration: `${duration}s`,
-          animationDelay: `${delay}s`,
-          top: `${Math.random() * 100}vh`, // Random initial position
-          left: `${Math.random() * 100}vw`, // Random initial position
-        }}
-      >
-        *
-      </div>
-    );
-  }
-  return snowflakes;
-};
+import "../src/components/PaymentPage/tabLayout.css";
+import FrequentAskedQuestions from "./components/PaymentPage/FAQ";
+import { CardWithForm } from "./components/Cards/card";
+import { CardWithFormQr } from "./components/Cards/qrPayment";
+import RoutingApp from "./Routing/routing";
+import GiftCardApp from "./components/PaymentPage/buyGift";
+// const generateSnowflakes = (num) => {
+//   const snowflakes = [];
+//   for (let i = 0; i < num; i++) {
+//     // Random values for each snowflake's movement
+//     const moveX1 = `${Math.random() * 100 - 50}vw`;
+//     const moveY1 = `${Math.random() * 100 - 50}vh`;
+//     const moveX2 = `${Math.random() * 100 - 50}vw`;
+//     const moveY2 = `${Math.random() * 100 - 50}vh`;
+//     const moveX3 = `${Math.random() * 100 - 50}vw`;
+//     const moveY3 = `${Math.random() * 100 - 50}vh`;
+//     const moveX4 = `${Math.random() * 100 - 50}vw`;
+//     const moveY4 = `${Math.random() * 100 - 50}vh`;
+//     const duration = Math.random() * 10 + 10; // Random duration between 5s and 10s
+//     const delay = Math.random() * 3; // Random delay between 0s and 3s
+
+//     snowflakes.push(
+//       <div
+//         key={i}
+//         className="snowflake"
+//         style={{
+//           "--moveX1": moveX1,
+//           "--moveY1": moveY1,
+//           "--moveX2": moveX2,
+//           "--moveY2": moveY2,
+//           "--moveX3": moveX3,
+//           "--moveY3": moveY3,
+//           "--moveX4": moveX4,
+//           "--moveY4": moveY4,
+//           animationDuration: `${duration}s`,
+//           animationDelay: `${delay}s`,
+//           top: `${Math.random() * 100}vh`, // Random initial position
+//           left: `${Math.random() * 100}vw`, // Random initial position
+//         }}
+//       >
+//         *
+//       </div>
+//     );
+//   }
+//   return snowflakes;
+// };
 
 const App = () => {
   return( 
     <>
 
-    <Navbar/>
-    <HeroSection/>
+    {/* <Router>
+     <Navbar/>
+      <Routes>
+        <Route path="/" element={<Home />} /> 
+        <Route path="/sign-in" element={<buyGiftCards />} /> 
+      </Routes>
+    </Router> */}
+
+    <RoutingApp/>
+
+
+    {/* <HeroSection/>
   <div className="snow-container">{generateSnowflakes(20)}</div>
   <h1 className="heading">Shop from Hundreds of Gift Cards</h1>
   <p className="description">Buy,Send And Claim Gifts Cards. Chip in with Friends. Store and Manage Gift Cards.</p>
     <GiftCards/>
-    <Footer/>
+    <GiftComponent/>
+    <SecondBottomGifter/>
+    <RatingFeature/>
+    
+    <Footer/> */}
 
-  
-  </>
+    {/* <GiftCards/> */}
+
+    {/* <GiftCardApp/> */}
+
+
+    {/* <HomeVisaRewards/>
+    <Rewards/>
+    <FeatureComparison/>
+    <VisaRewards/>
+    <VisaRewardsReverse/>
+    <VisaRewardsApi/> */}
+
+    {/* <BuyCrypto/> */}
+    {/* <giftCardData/>
+    <GiftCards/>
+    <BuyCryptoCards/> */}
+
+    
+
+    {/* <GiftCardPayment/> */}
+
+    {/* <TabLayout/> */}
+
+
+{/* <CardWithFormQr/> */}
+    
+
+
+    {/* <FrequentAskedQuestions/> */}
+   </>
 );
 };
 export default App;

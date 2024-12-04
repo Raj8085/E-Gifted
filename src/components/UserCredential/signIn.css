@@ -1,0 +1,165 @@
+/* General Styles */
+/* body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  } */
+  
+  .sign-in-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .sign-in-card {
+    width: 600px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    position: relative;
+  }
+  
+  /* Header Section */
+  .sign-in-header {
+    background: #fff;
+    border-radius: 12px 12px 0 0;
+    position: relative;
+    padding: 20px 0;
+    text-align: center;
+    font-weight: bold;
+  }
+  
+  .sign-in-header::before,
+  .sign-in-header::after {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 10px;
+    background: #0073e6;
+    top: 0;
+    transform: translateY(-50%);
+  }
+  
+  .sign-in-header::before {
+    left: 15px;
+  }
+  
+  .sign-in-header::after {
+    right: 15px;
+  }
+  
+  /* Form Section */
+  .sign-in-form {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .sign-in-form p {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .email-input {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 20px;
+  }
+  
+  .continue-button {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    background-color: #0073e6;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 20px;
+  }
+  
+  .continue-button:hover {
+    background-color: #005bb5;
+  }
+  
+  /* Divider Section */
+  .divider {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 20px 0;
+    color: #777;
+    font-size: 14px;
+  }
+  
+  .divider hr {
+    flex: 1;
+    border: none;
+    height: 1px;
+    background-color: #ddd;
+  }
+  
+
+  
+  /* Social Login Buttons */
+
+
+.social-login-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .social-button {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    font-weight: bold;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+  
+  .social-button.apple {
+    background-color: skyblue;
+    color: white;
+  }
+  
+  .social-button.google {
+    background-color: white;
+    color: #db4437;
+  }
+  
+  .social-button.facebook {
+    background-color: #3b5998;
+    color: white;
+  }
+  
+  .social-button.amazon {
+    background-color: #ff9900;
+    color: white;
+  }
+  
+  .social-button:hover {
+    opacity: 0.9;
+  }
+   
+
+
+
+
+

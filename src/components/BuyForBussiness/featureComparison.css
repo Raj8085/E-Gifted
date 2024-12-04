@@ -1,0 +1,42 @@
+.feature-comparison-container {
+    width: 80%;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+    margin-top: 10px;
+  }
+  
+  .header {
+    text-align: center;
+    color: white;
+    padding: 20px;
+  }
+  
+  .comparison-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+  }
+  
+  .comparison-table th,
+  .comparison-table td {
+    border: 1px solid #ccc;
+    padding: 15px;
+    font-size: 14px;
+  }
+  
+  .comparison-table th {
+    color: white;
+  }
+  
+  .comparison-table td:first-child {
+    text-align: left;
+    background-color: #002f6c;
+    color: white;
+  }
+  
+  .logo {
+    width: 150px;
+    height: auto;
+    color: white;
+  }
+  

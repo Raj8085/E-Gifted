@@ -1,0 +1,39 @@
+.tab-layout {
+  font-family: Arial, sans-serif;
+  font-size: 20px;
+  border: 3px solid #ccc;
+  width: 75%;
+  margin: auto;
+  margin-top: 20px;
+}
+
+.tabs {
+  display: flex;
+  border-bottom: 2px solid #ccc;
+}
+
+.tab-button {
+  flex: 1;
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+  background: #f9f9f9;
+  border: none;
+  outline: none;
+  border-right: 1px solid #ccc;
+}
+
+.tab-button:last-child {
+  border-right: none;
+}
+
+.tab-button.active {
+  font-weight: bold;
+  background: #fff;
+  border-bottom: 2px solid #000;
+}
+
+.tab-content {
+  padding: 15px;
+  background: #fff;
+}

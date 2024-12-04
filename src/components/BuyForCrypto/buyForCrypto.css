@@ -1,0 +1,370 @@
+.crypto-hero-container {
+    position: relative; /* Enables positioning for child elements */
+    display: inline-block; /* Ensures the container wraps around the image */
+    text-align: center; /* Centers text horizontally */
+  }
+  
+  .crypto-hero-image {
+    width: 100%; /* Makes the image responsive */
+    height: auto; /* Maintains aspect ratio */
+    display: block; /* Prevents whitespace below the image */
+  }
+  
+  .crypto-hero-heading {
+    position: absolute; /* Positions the heading over the image */
+    top: 50%; /* Centers vertically */
+    left: 50%; /* Centers horizontally */
+    transform: translate(-50%, -50%); /* Corrects centering offset */
+    color: white; /* Text color for visibility */
+    font-size: 32px; /* Adjust font size as needed */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Adds a shadow for readability */
+    padding: 10px; /* Optional padding for better readability */
+    text-align: center; /* Centers text inside the heading */
+    white-space: nowrap;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  .crypto-hero-subheading{
+    font-size: 60px;
+    font-style: oblique;
+  }
+
+
+  @media (max-width: 1024px) {
+    .crypto-hero-heading {
+      font-size: 28px; /* Reduce font size for medium screens */
+    }
+
+    .crypto-hero-subheading {
+      font-size: 50px; /* Adjust subheading size */
+    }
+  }
+
+  @media (max-width: 768px) {
+    .crypto-hero-heading {
+      font-size: 24px; /* Further reduce font size for smaller screens */
+      white-space: normal; /* Allow text wrapping */
+      padding: 8px; /* Adjust padding */
+    }
+
+    .crypto-hero-image{ 
+        height: 400px;
+    }
+
+    .crypto-hero-subheading {
+      font-size: 40px; /* Adjust subheading size for small screens */
+    }
+  }
+
+  @media (max-width: 480px) {
+    .crypto-hero-heading {
+      font-size: 18px; /* Smallest font size for extra small screens */
+    }
+
+    .crypto-hero-subheading {
+      font-size: 30px; /* Adjust subheading size for extra small screens */
+    }
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+/* App.css */
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+  }
+  
+  .app-container {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .header {
+    margin-bottom: 40px;
+  }
+  
+  .header h1 {
+    font-size: 2rem;
+    color: #2c3e50;
+  }
+  
+  .header p {
+    font-size: 1rem;
+    color: #7f8c8d;
+  }
+  
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .feature-card {
+    background: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  
+  .feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  .icon-container {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    color: #3498db;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .feature-card h2 {
+    font-size: 1.5rem;
+    color: #34495e;
+    margin: 10px 0;
+  }
+  
+  .feature-card p {
+    font-size: 1rem;
+    color: #7f8c8d;
+  }
+  
+  .footer {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #ecf0f1;
+    border-radius: 10px;
+  }
+  
+  .footer h2 {
+    font-size: 1.5rem;
+    color: #34495e;
+  }
+  
+  .footer p {
+    font-size: 1rem;
+    color: #7f8c8d;
+  }
+  
+  .footer a {
+    color: #3498db;
+    text-decoration: none;
+  }
+  
+  .footer a:hover {
+    text-decoration: underline;
+  }
+  
+
+  @media (max-width: 1024px) {
+    .features-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .header h1 {
+      font-size: 1.8rem;
+    }
+
+    .header p {
+      font-size: 0.9rem;
+    }
+
+    .feature-card h2 {
+      font-size: 1.3rem;
+    }
+
+    .feature-card p {
+      font-size: 0.9rem;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .features-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .header h1 {
+      font-size: 1.5rem;
+    }
+
+    .header p {
+      font-size: 0.8rem;
+    }
+
+    .feature-card h2 {
+      font-size: 1.2rem;
+    }
+
+    .feature-card p {
+      font-size: 0.8rem;
+    }
+  }
+
+
+
+  
+
+/* gift for currency */
+
+
+
+/* General styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+  }
+  
+  .gift-card-container {
+    text-align: center;
+    padding: 40px 20px;
+  }
+  
+  /* Header styles */
+  .header h1 {
+    font-size: 2rem;
+    color: #2c3e50;
+    margin: 0;
+  }
+  
+  .header p {
+    font-size: 1rem;
+    color: #7f8c8d;
+    margin: 10px 0 30px;
+  }
+  
+  /* Grid styles */
+  .gift-card-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .gift-card {
+    background: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    width: 300px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+    overflow: hidden;
+  }
+  
+  .gift-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  .gift-card-image-container {
+    height: 200px;
+    overflow: hidden;
+  }
+  
+  .gift-card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .gift-card-title {
+    font-size: 1rem;
+    color: #34495e;
+    margin: 10px 0;
+    padding: 0 10px;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .header h1 {
+      font-size: 1.5rem;
+    }
+  
+    .header p {
+      font-size: 0.9rem;
+    }
+  
+    .gift-card {
+      width: 90%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .header h1 {
+      font-size: 1.2rem;
+    }
+  
+    .header p {
+      font-size: 0.8rem;
+    }
+  
+    .gift-card-title {
+      font-size: 0.9rem;
+    }
+  }
+  
+
+
+
+
+/* buy cards for crypto */
+
+
+
+/* styles.css */
+
+ 
+
+.cards-crypto-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.cards-crypto-title {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.cards-crypto-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul li {
+  margin: 5px 0;
+  font-size: 1rem;
+  color: #0074d9;
+  cursor: pointer;
+  text-align: left;
+}
+
+ul li:hover {
+  text-decoration: underline;
+}

@@ -1,0 +1,194 @@
+.gift-card-container {
+    max-width: 800px;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+    color: #333;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+  }
+  
+  .header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .header .card-image img {
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+  }
+  
+  .header h1 {
+    font-size: 1.5rem;
+  }
+  
+  .features {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+  }
+  
+  .feature {
+    text-align: center;
+  }
+  
+  .icon {
+    font-size: 1.5rem;
+  }
+  
+  .reviews-and-payment {
+    margin: 20px 0;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+    width: 200px;
+    margin-left: 80px;
+  }
+  
+  .reviews {
+    margin-bottom: 10px;
+  }
+  
+  .payment-options img {
+    margin: 0 10px;
+    width: 50px;
+    height: 20px;
+  }
+  
+  .note {
+    font-size: 0.9rem;
+    color: #666;
+  }
+  
+  .pricing {
+    margin: 20px 0;
+  }
+  
+  .price-adjuster {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .price-adjuster button {
+    width: 30px;
+    height: 30px;
+    background-color: #ddd;
+    border: none;
+    border-radius: 50%;
+  }
+  
+  .price-options {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 10px 0;
+  }
+  
+  .price-options button {
+    padding: 10px 20px;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+    border-radius: 20px;
+    cursor: pointer;
+  }
+  
+  .price-options button.active {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+  }
+  
+  .send-to-friend,
+  .add-to-cart {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    text-align: center;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  .send-to-friend {
+    background-color: #f9f9f9;
+    color: #333;
+  }
+  
+  .add-to-cart {
+    background-color: #007bff;
+    color: #fff;
+  }
+  
+  .tabs {
+    display: flex;
+    gap: 10px;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 10px;
+  }
+  
+  .tab {
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  
+  .tab.active {
+    font-weight: bold;
+    border-bottom: 2px solid #007bff;
+  }
+  
+  .tab-content {
+    font-size: 0.9rem;
+    color: #666;
+  }
+  
+
+
+
+
+
+
+  
+  /* .tab-layout {
+    font-family: Arial, sans-serif;
+    border: 1px solid #ccc;
+    width: 50%;
+    margin: auto;
+    margin-top: 20px;
+  }
+  
+  .tabs {
+    display: flex;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .tab-button {
+    flex: 1;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+    background: #f9f9f9;
+    border: none;
+    outline: none;
+    border-right: 1px solid #ccc;
+  }
+  
+  .tab-button:last-child {
+    border-right: none;
+  }
+  
+  .tab-button.active {
+    font-weight: bold;
+    background: #fff;
+    border-bottom: 2px solid #000;
+  }
+  
+  .tab-content {
+    padding: 15px;
+    background: #fff;
+  } 
