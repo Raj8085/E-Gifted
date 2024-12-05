@@ -6,7 +6,7 @@ import RatingFeature from "../SecondBottom/ratingFeature"
 
 const BuyGiftCrypto = () => {
   return (
-    <div className="mt-16">
+    <div className="">
       <HomeVisaRewards/>
       <Rewards/>
       <FeatureComparison/>

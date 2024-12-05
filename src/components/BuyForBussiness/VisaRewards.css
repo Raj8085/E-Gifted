@@ -285,6 +285,9 @@
     .reward-card-image-api {
       max-width: 90%; /* Limit image size on smaller screens */
     }
+    .image-reward{
+      margin-right: 20px;
+    }
   }
   
 

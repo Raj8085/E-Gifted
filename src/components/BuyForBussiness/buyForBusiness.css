@@ -80,5 +80,8 @@
     .rewards-grid {
       grid-template-columns: 1fr; /* Stacks items vertically on smaller screens */
     }
+    .rewards-header{
+      margin-top: 500px;
+    }
   }
   

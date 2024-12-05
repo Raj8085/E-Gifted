@@ -1072,6 +1072,7 @@ export default function GiftCardApp({ selectedCard }) {
 
 <Navbar cart={cart} />
 
+
     </div>
   );
 }

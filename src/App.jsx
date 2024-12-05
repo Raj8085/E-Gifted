@@ -148,6 +148,9 @@ const App = () => {
     <RoutingApp/>
 
 
+
+
+
     {/* <HeroSection/>
   <div className="snow-container">{generateSnowflakes(20)}</div>
   <h1 className="heading">Shop from Hundreds of Gift Cards</h1>

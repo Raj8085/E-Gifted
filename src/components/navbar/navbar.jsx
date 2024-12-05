@@ -1,5 +1,5 @@
 // import { useState } from "react";
-// import "../../../src/App.css";
+import "../../../src/App.css";
 // import { Input } from "../ui/input";
 // import { Button } from "../ui/button";
 
@@ -556,10 +556,9 @@
 
 import {Link, useNavigate } from "react-router-dom";
 import { Button } from "../ui/button";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 import PropTypes from 'prop-types';
-
 
 
 // eslint-disable-next-line react/prop-types
@@ -568,6 +567,28 @@ const Navbar = ({ cart }) => {
   const [userName, setUserName] = useState(null);
   const navigate = useNavigate();
 
+
+  const sidebarRef = useRef(null);
+  const menuIconRef = useRef(null);
+
+  useEffect(() => {
+    // Close sidebar if clicked outside
+    const handleClickOutside = (event) => {
+      if (sidebarRef.current && !sidebarRef.current.contains(event.target)) {
+        setDrawerOpen(false); // Close the sidebar
+      }
+    };
+
+    // Add event listener
+    document.addEventListener("mousedown", handleClickOutside);
+
+    // Cleanup event listener when component is unmounted
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
+
   useEffect(() => {
     const userData = JSON.parse(localStorage.getItem("userData"));
     if (userData && userData.name) {
@@ -575,8 +596,12 @@ const Navbar = ({ cart }) => {
     }
   }, []);
 
-  const toggleDrawer = () => {
-    setDrawerOpen(!isDrawerOpen);
+  // const toggleDrawer = () => {
+  //   setDrawerOpen(!isDrawerOpen);
+  // };
+  const toggleDrawer = (event) => {
+    event.stopPropagation(); // Prevent click from propagating to the document
+    setDrawerOpen((prevState) => !prevState);
   };
 
   const handleSignOut = () => {
@@ -592,13 +617,51 @@ const Navbar = ({ cart }) => {
 
   return (
     <div>
-      <nav className="bg-white shadow-md fixed top-0 left-0 w-full z-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
-          <Link to="/">
-            <img src="/eGiftedImages/eGifter.svg" className="h-8 w-auto" alt="Logo" />
+      <nav className="bg-white shadow-md fixed top-0 left-0 w-full z-50 p-2">
+      <div className="max-w-7xl mx-auto px-4 sm:px-8 lg:px-8 flex items-center justify-between h-12 ">
+          {/* Logo */}
+          <Link to="/" className="">
+            <img
+              src="/eGiftedImages/eGifter.svg"
+              className="h-8 w-auto ml-16"
+              alt="Logo"
+            />
           </Link>
 
-          <div className="hidden md:flex space-x-6">
+          {/* Menu Icon in the center */}
+          <div
+            className={`menu-icon ${isDrawerOpen ? "cross-icon" : ""}`}
+            onClick={toggleDrawer}
+            ref={menuIconRef} 
+            style={{
+              position: "absolute",
+              left: "5%",
+              transform: "translateX(-50%)",
+            }}
+          >
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+      {/* <div
+           className={`menu-icon ${isDrawerOpen ? "cross-icon" : ""}`}
+           onClick={toggleDrawer}
+           style={{
+            position: "absolute",
+            left: "50%",
+            transform: "translateX(-2000%)",
+          }}
+         >
+           <div></div>
+           <div></div>
+           <div></div>
+         </div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-8 lg:px-8 flex items-center justify-between h-12">
+          <Link to="/">
+            <img src="/eGiftedImages/eGifter.svg" className="h-8 w-auto mb-6" alt="Logo" /> 
+          </Link> */}
+
+          <div className="hidden md:flex space-x-6 ">
             <Link to="/cards" className="text-gray-700 hover:text-blue-500 font-medium">
               Buy Gift Cards
             </Link>
@@ -622,7 +685,7 @@ const Navbar = ({ cart }) => {
               </div>
             ) : (
               <Link to="/signin">
-                <button className="bg-blue-500 text-white px-4 py-2 rounded-full hover:bg-blue-600 transition">
+                <button className=" bg-blue-500 text-white px-4 py-2 rounded-full hover:bg-blue-600 transition">
                   Sign Up
                 </button>
               </Link>
@@ -637,7 +700,7 @@ const Navbar = ({ cart }) => {
                
               />
               {cart.length > 0 && (
-                <div className="cart-item-count absolute top-0 mt-4 ml-6 h-4 w-4 rounded-full bg-red-500 text-white text-xs flex items-center justify-center">
+                <div className="cart-item-count absolute top-0 mt-4 ml-6 h-4 w-4 rounded-full bg-red-500 text-white text-xs flex items-cen  ter justify-center">
                   {cart.length}
                 </div>
               )}
@@ -646,6 +709,50 @@ const Navbar = ({ cart }) => {
           </div>
         </div>
       </nav>
+      <div className={`drawer ${isDrawerOpen ? "open" : ""}`}
+       ref={sidebarRef}
+      >
+         <ul>
+           <Link to="/crypto">
+             <li>
+               <img
+                 src="public/sideBar/download (4).png"
+                 className="inline-block w-5 h-5 mr-2"
+                 alt=""
+               />
+               Buy Digital Gift <span className="buy-gift">Cards</span>
+             </li>
+           </Link>
+           <Link to="/businessBuy">
+           <li>
+             <img
+               src="public/sideBar/download (3).png"
+               className="inline-block w-5 h-5 mr-2"
+               alt=""
+             />
+             Buy For Business
+           </li>
+           </Link>
+           <Link to="/crypto">
+           <li>
+             <img
+               src="public/sideBar/download (2).png"
+               alt=""
+               className="inline-block w-5 h-5 mr-2"
+             />
+             Buy With Bitcoin
+           </li>
+           </Link>
+           {/* <li>
+             <img
+               src="public/sideBar/download.png"
+               alt=""
+               className="inline-block w-5 h-5 mr-2"
+             />
+             Order Status
+           </li> */}
+         </ul>
+      </div>
     </div>
   );
 };

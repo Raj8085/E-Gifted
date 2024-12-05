@@ -40,15 +40,16 @@ import './secondBottom.css';
 
 function SecondBottomGifter() {
   return (
-    <div className="app">
+    <div className="app -mt-24">
        <Link to="/cards">
-      <div className="card-container mt-20">
+      <div className="card-container">
        
         <Card
           image="public/eGiftedImages/buy-with-bitcoin.png"
           title="Buy Gift Cards with Bitcoin"
           description="Shop from 300+ Brands Using Bitcoin | No Additional Fees with Bitcoin"
           buttonText="SHOP NOW"
+          
         />
         <Card
           image="public/eGiftedImages/egifter-personalization.png"

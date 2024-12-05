@@ -69,6 +69,18 @@
   .gift-grid {
     grid-template-columns: repeat(2, 1fr); /* 2 cards per row */
     gap: 15px;
+    margin-right: 90px;
+  }
+
+  @media (max-width: 768px) {
+    .grid-title{
+      margin-left: 190px;
+      width: 700px;
+    }
+    .grid-title-image{
+      margin-right: 110px;
+      margin-bottom: -80px;
+    }
   }
 
   .gift-container {
@@ -321,6 +333,7 @@ body {
   cursor: pointer;
   margin-right: 20px;
   transition: all 0.3s ease-in-out;
+  
 }
 
 .menu-icon div {
@@ -365,7 +378,7 @@ body {
   transition: transform 0.3s ease-in-out;
   padding: 20px;
   z-index: 999;
-  margin-top: 60px;
+  margin-top: 64px;
 }
 
 .drawer.open {
@@ -505,7 +518,9 @@ body {
 h1 {
   z-index: 15;
 }
-
+/* .grid-item img{
+  height: 50px;
+} */
 
 
 
@@ -548,6 +563,9 @@ background-repeat: no-repeat;
     padding: 30px;
     margin-top: 60px;
   }
+  .gift-img{
+    padding-left: 50px;
+  }
 
   .input {
     width: 80%;
@@ -555,6 +573,9 @@ background-repeat: no-repeat;
 
   .drawer {
     width: 220px; /* Slightly wider drawer on tablet screens */
+  }
+  .buy-gift{
+    padding-left: 30px;
   }
 
   .menu-icon {
@@ -565,7 +586,12 @@ background-repeat: no-repeat;
   .input-container, .input-container1 {
     width: 100%;
   }
+  .user-name{
+    visibility: hidden;
+    /* padding-left: 55px; */
+  }
 }
+
 
 /* Large screens (Desktops) */
 @media (min-width: 1024px) {

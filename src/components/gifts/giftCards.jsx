@@ -90,7 +90,8 @@ import { useState } from "react";
 import "../../../src/App.css";
 import GiftCardApp from "../../components/PaymentPage/buyGift"; // Make sure to import the GiftCardApp component
 import {  useNavigate } from "react-router-dom";
-const GiftCards = () => {
+import BuyCryptoCards from "../BuyForCrypto/buyForCrypto";
+const GiftCards = ({showInput = true}) => {
   const giftCardData = [
     { text: 'Gift Card 1', brand: 'Nike', website: 'nike.com', image: "public/eGiftedImages/cardCurrency.png" },
     { text: 'Gift Card 2', brand: 'Adidas', website: 'adidas.com', image: "public/eGiftedImages/currency_fp01.png" },
@@ -124,7 +125,12 @@ const GiftCards = () => {
     <h1 className="ml-40 text-4xl ">All Cards</h1>
     <input placeholder="Search" className="border-2 border-gray-400 mr-24 rounded-full "/>
     </div> */}
-    
+    {/* {showInput && (
+        <div className="flex justify-between">
+          <h1 className="ml-40 text-4xl">All Cards</h1>
+          <input placeholder="Search" className="border-2 border-gray-400 mr-24 rounded-full" />
+        </div>
+      )} */}
     <div className="gift-grid gap-2 ml-24">
       {selectedCard ? (
         <GiftCardApp selectedCard={selectedCard}/>

@@ -40,3 +40,9 @@
     color: white;
   }
   
+
+@media screen and (max-width: 768px) {
+  .feature-comparison-container{
+    margin-top: 450px;
+  }
+}
