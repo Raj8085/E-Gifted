@@ -52,15 +52,14 @@ const Home = () => {
          <HeroSection/>
   <div className="snow-container">{generateSnowflakes(15)}</div>
   <div className="mt-10 mb-24">
-  <h1 className="flex items-center justify-center text-5xl font-semibold">Shop from Hundreds of Gift Cards</h1>
-  <p className="flex items-center justify-center mt-5 mb-8 text-3xl">Buy,Send And Claim Gifts Cards. Chip in with Friends. Store and Manage Gift Cards.</p>
+  <h1 className="flex items-center justify-center text-5xl font-semibold home-hero-heading">Shop from Hundreds of Gift Cards</h1>
+  <p className="flex items-center justify-center mt-5 mb-8 text-3xl home-hero-para">Buy,Send And Claim Gifts Cards. Chip in with Friends. Store and Manage Gift Cards.</p>
   </div>
     <GiftCards/>
     {/* <GiftCardsDuplicate/> */}
     <GiftComponent/>
     <SecondBottomGifter/>
     <RatingFeature/>
-    
     <Footer/>
     
    

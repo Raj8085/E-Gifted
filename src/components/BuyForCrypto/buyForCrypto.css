@@ -31,7 +31,7 @@
 
   @media (max-width: 1024px) {
     .crypto-hero-heading {
-      font-size: 28px; /* Reduce font size for medium screens */
+    font-size: 10px;
     }
 
     .crypto-hero-subheading {
@@ -41,9 +41,18 @@
 
   @media (max-width: 768px) {
     .crypto-hero-heading {
-      font-size: 24px; /* Further reduce font size for smaller screens */
-      white-space: normal; /* Allow text wrapping */
-      padding: 8px; /* Adjust padding */
+      /* font-size: 10px;  */
+      white-space: normal; 
+      margin-top: 15px;
+     
+    }
+    /* .crypto-hero-button{
+      margin-top: 200px;
+
+    } */
+    .crypto-hero-description{
+      visibility: hidden;
+
     }
 
     .crypto-hero-image{ 
@@ -51,7 +60,8 @@
     }
 
     .crypto-hero-subheading {
-      font-size: 40px; /* Adjust subheading size for small screens */
+      font-size: 40px;
+      margin-bottom: 50px;
     }
   }
 
@@ -90,13 +100,14 @@ body {
     padding: 20px;
   }
   
-  .header {
+  .header-crypto{
     margin-bottom: 40px;
   }
   
-  .header h1 {
+  .header-crypto h1 {
     font-size: 2rem;
     color: #2c3e50;
+    font-weight: bolder;
   }
   
   .header p {
@@ -104,6 +115,7 @@ body {
     color: #7f8c8d;
   }
   
+   
   .features-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -367,4 +379,10 @@ ul li {
 
 ul li:hover {
   text-decoration: underline;
+}
+
+@media screen and (max-width: 768px) {
+  .cards-crypto-grid{
+    margin-left: 100px;
+  } 
 }

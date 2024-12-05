@@ -36,15 +36,15 @@ const HeroSection = () => {
         />  
       </div>
       <div className="grid-item-text-content">
-        <h1 className='text-5xl font-bold'>Buy & Send Gift Cards Instantly With Crypto</h1>
-        <p className='mt-8 text-3xl'>Buy premium gift cards with Cryptocurrency.</p>
+        <h1 className='text-5xl font-bold hero-heading'>Buy & Send Gift Cards Instantly With Crypto</h1>
+        <p className='mt-8 text-3xl hero-para'>Buy premium gift cards with Cryptocurrency.</p>
         <input placeholder='Search for brands or products' className='w-96 h-12 mt-8 rounded-full cursor-pointer'/>  
         {/* <Button></Button> */}
       </div>
       
       <div className="grid-item context">
-        <h2 className='text-5xl font-bold'>Buying for Business?</h2>
-        <p className='mt-8 text-3xl'>Order gift cards in bulk for rewards & incentive programs.</p>
+        <h2 className='text-5xl font-bold hero-heading'>Buying for Business?</h2>
+        <p className='mt-8 text-3xl hero-para'>Order gift cards in bulk for rewards & incentive programs.</p>
         {/* <h1>Image Swap Demo</h1> */}
         <img
           src={imageUrl}

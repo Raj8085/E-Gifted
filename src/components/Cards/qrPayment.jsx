@@ -111,9 +111,9 @@ export function CardWithFormQr({ onBackToCart, price, quantity,name,brand }) {
 
   return (
     <>
-      <div className="flex items-center justify-center min-h-screen">
+      <div className="flex items-center justify-center min-h-screen qr-code">
         {!showQrCard ? (
-          <Card className="w-[700px] shadow-lg rounded-lg border bg-white">
+          <Card className="w-[700px] shadow-lg rounded-lg border bg-white qr-card">
             <CardHeader className="text-center">
               <CardTitle className="text-2xl font-bold">Please review your order</CardTitle>
               <CardDescription className="text-gray-600">
@@ -121,7 +121,7 @@ export function CardWithFormQr({ onBackToCart, price, quantity,name,brand }) {
               </CardDescription>
             </CardHeader>
             <CardContent>
-              <div className="flex flex-col items-center space-y-4 w-[500px] ml-20">
+              <div className="flex flex-col items-center space-y-4 w-[500px] ml-20 qr-card-details">
               <div className="flex flex-col space-y-2 text-center w-3/4">
                   <Label htmlFor="brand" className="text-lg font-medium text-gray-700">
                     eGift Name:
@@ -155,12 +155,12 @@ export function CardWithFormQr({ onBackToCart, price, quantity,name,brand }) {
                   <Input
                     id="promo-code"
                     placeholder="Enter your promo code"
-                    className="border border-gray-300 rounded-lg p-2 w-full"
+                    className="border border-gray-300 rounded-lg p-2 w-full qr-input"
                   />
                 </div>
               </div>
             </CardContent>
-            <CardFooter className="flex justify-between px-4 py-2">
+            <CardFooter className="flex justify-between px-4 py-2 qr-button">
               <Button variant="outline" className="px-4 py-2">
                 APPLY PROMO CODE
               </Button>

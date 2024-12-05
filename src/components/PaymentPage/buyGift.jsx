@@ -821,6 +821,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { CardWithFormQr } from "../Cards/qrPayment";
 import Navbar from "../navbar/navbar";
+import "./buyGift.css";
 
 // eslint-disable-next-line react/prop-types
 export default function GiftCardApp({ selectedCard }) {
@@ -873,6 +874,8 @@ export default function GiftCardApp({ selectedCard }) {
           {/* Left Panel */}
           <ResizablePanel defaultSize={50} minSize={30} maxSize={70}>
             <div className="flex flex-col h-full items-center justify-center p-8 bg-gray-50 rounded-lg">
+            <h1 className="text-2xl font-bold">{selectedCard.brand} eGift Card</h1>
+
               <div className="pricing space-y-6 w-full max-w-sm">
                 <img
                   // eslint-disable-next-line react/prop-types
@@ -882,7 +885,7 @@ export default function GiftCardApp({ selectedCard }) {
                 />
 
                 {/* Price Adjuster */}
-                <div className="price-adjuster flex items-center justify-between space-x-4">
+                <div className="price-adjuster flex items-center justify-between space-x-4 payment-minus">
                   <Button onClick={handlePriceDecrease}>-</Button>
                   <span className="text-2xl font-bold">£{price.toFixed(2)}</span>
                   <Button onClick={handlePriceIncrease}>+</Button>
@@ -891,7 +894,7 @@ export default function GiftCardApp({ selectedCard }) {
 
                 {/* Quick Price Options */}
                 <div className="price-options grid grid-cols-3 gap-4">
-                  {[5, 25, 50, 100, 250, 300].map((option) => (
+                  {[ 50, 100, 250, 300].map((option) => (
                     <Button
                       key={option}
                       onClick={() => handleQuickPriceSelect(option)}
@@ -907,10 +910,10 @@ export default function GiftCardApp({ selectedCard }) {
                 </div>
 
                 {/* Quantity Adjuster */}
-                <div className="quantity-adjuster flex items-center justify-between mt-4 space-x-4">
+                <div className="quantity-adjuster flex items-center justify-between mt-4 space-x-4 payment-plus">
                   <Button onClick={handleQuantityDecrease}>-</Button>
                   <span className="text-2xl font-bold">{quantity}</span>
-                  <Button onClick={handleQuantityIncrease}>+</Button>
+                  <Button onClick={handleQuantityIncrease} className="">+</Button>
                 </div>
                 <p className="text-center text-sm text-gray-500">
                   (Minimum: 1)
@@ -991,15 +994,15 @@ export default function GiftCardApp({ selectedCard }) {
                </ResizablePanel> */}
 
 
-               <ResizablePanel defaultSize={50} minSize={30}>
+               <ResizablePanel defaultSize={50} minSize={30} className="payment-top">
              <ResizablePanelGroup direction="vertical">
                <ResizableHandle />
                <div>
-                 <h1 className="text-3xl font-bold font-sans flex mt-4 justify-center">
+                 <h1 className="text-3xl font-bold font-sans flex mt-4 justify-center payment-review">
                  {selectedCard.brand} eGift Card
                  </h1>
                </div>
-               <div className="flex justify-between mt-12 gap-4 text-sm">
+               <div className="flex justify-between mt-12 gap-4 text-sm payment-image">
                  {[
                    { src: "download (1).png", text: "Use Online" },
                    { src: "download (2).png", text: "Use In-Store" },
@@ -1008,7 +1011,7 @@ export default function GiftCardApp({ selectedCard }) {
                  ].map((item, index) => (
                    <div
                      key={index}
-                     className="flex items-center border border-gray-300 rounded-2xl bg-gray-100"
+                     className="flex items-center border border-gray-300 rounded-2xl bg-gray-100 payment-review"
                    >
                      <img
                        src={`public/eGiftedImages/${item.src}`}
@@ -1021,8 +1024,8 @@ export default function GiftCardApp({ selectedCard }) {
                </div>
                <ResizablePanel defaultSize={75}>
                  <div className="flex h-full items-center justify-centep-6">
-                   <div className="reviews-and-payment ">
-                     <div className="reviews ml-7">
+                   <div className="">
+                     <div className="reviews ml-7 payment-review">
                        <p className="text-2xl">
                          <strong>Great</strong>{" "}
                          <span className="rating">⭐⭐⭐⭐☆</span>
@@ -1030,13 +1033,14 @@ export default function GiftCardApp({ selectedCard }) {
                        </p>
                      </div>
                      <div className="payment-options">
-                       <p className="text-xl font-bold flex items-center justify-center mt-5 ">
+                       <p className="text-xl font-bold flex items-center justify-center mt-5 payment-review italic">
                          You can pay for Adidas eGift Cards with:
                        </p>
-                       <div className="flex w-24 items-center justify-between ml-36 mt-5">
+                       <div className="flex w-24 items-center justify-between ml-36 mt-5 payment-review h-10">
                          <img
                            src="public/eGiftedImages/skrill-text-logo.png"
                            alt="skrill"
+                          className="h-[300px]"
                          />
                          <img
                            src="public/eGiftedImages/crypto-icon.png"
@@ -1044,11 +1048,11 @@ export default function GiftCardApp({ selectedCard }) {
                          />
                        </div>
                      </div>
-                     <p className="text-xl font-semibold mt-5">
-                       📍 Geographic restrictions apply. Review the Terms for
-                       details.
+                     <p className="text-xl font-semibold mt-5 payment-review">
+                       📍 Geographic restrictions apply. Review the <span className="ml-8">Terms for
+                       details</span>.
                      </p>
-                   </div>
+                    </div>
                  </div>
                </ResizablePanel>
              </ResizablePanelGroup>

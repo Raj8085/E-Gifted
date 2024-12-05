@@ -146,15 +146,47 @@
     font-size: 0.9rem;
     color: #666;
   }
+  .payment-image{
+    display: grid;
+    grid-template-columns: repeat(3, fr);
+    margin-left: 130px;
+    gap: 40px;
+    height: 100px;
+  }
+
+  @media screen and (max-width: 768px) {
+    .payment-review{
+      visibility: hidden;
+    }
+    .payment-top{
+      margin:-200px;
+    }
+    .payment-plus{
+      margin:50px;
+    }
+    .qr-code{
+      margin-left: -150px;
+    }
+    .qr-button{
+      display: grid;
+      justify-content: space-around;
+      gap: 20px;
+    }
+    .qr-input{
+      width: 200px;
+    }
+    .qr-card{
+      margin-left: -40px;
+    }
+   
+  }
   
 
 
 
 
-
-
-  
-  /* .tab-layout {
+/*    
+   .tab-layout {
     font-family: Arial, sans-serif;
     border: 1px solid #ccc;
     width: 50%;
@@ -191,4 +223,4 @@
   .tab-content {
     padding: 15px;
     background: #fff;
-  } 
+  }   */

@@ -692,7 +692,7 @@ const Navbar = ({ cart }) => {
             )}
 
             {/* <Link to="/cards"> */}
-            <div className=" cursor-pointer" onClick={showCart}>
+            {/* <div className=" cursor-pointer" onClick={showCart}>
               <img
                 src="/eGiftedImages/cartIcon.svg"
                 alt="Cart"
@@ -704,7 +704,7 @@ const Navbar = ({ cart }) => {
                   {cart.length}
                 </div>
               )}
-              </div>
+              </div> */}
             {/* </Link> */}
           </div>
         </div>
@@ -713,7 +713,7 @@ const Navbar = ({ cart }) => {
        ref={sidebarRef}
       >
          <ul>
-           <Link to="/crypto">
+           <Link to="/cards">
              <li>
                <img
                  src="public/sideBar/download (4).png"
@@ -740,7 +740,7 @@ const Navbar = ({ cart }) => {
                alt=""
                className="inline-block w-5 h-5 mr-2"
              />
-             Buy With Bitcoin
+             Buy With Crypto
            </li>
            </Link>
            {/* <li>

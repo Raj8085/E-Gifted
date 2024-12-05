@@ -90,21 +90,21 @@ import { useState } from "react";
 import "../../../src/App.css";
 import GiftCardApp from "../../components/PaymentPage/buyGift"; // Make sure to import the GiftCardApp component
 import {  useNavigate } from "react-router-dom";
-import BuyCryptoCards from "../BuyForCrypto/buyForCrypto";
+// import BuyCryptoCards from "../BuyForCrypto/buyForCrypto";
 const GiftCards = ({showInput = true}) => {
   const giftCardData = [
     { text: 'Gift Card 1', brand: 'Nike', website: 'nike.com', image: "public/eGiftedImages/cardCurrency.png" },
     { text: 'Gift Card 2', brand: 'Adidas', website: 'adidas.com', image: "public/eGiftedImages/currency_fp01.png" },
-    { text: 'Gift Card 3', brand: 'Adidas', website: 'adidas.com', image: "public/cardsImage/1073526_fp01.png" },
-    { text: 'Gift Card 4', brand: 'Adidas', website: 'adidas.com', image: "public/cardsImage/1073557_fp01.png" },
-    { text: 'Gift Card 5', brand: 'Nike', website: 'nike.com', image: "public/cardsImage/1073575_fp01.png" },
-    { text: 'Gift Card 6', brand: 'Adidas', website: 'adidas.com', image: "public/cardsImage/1073585_fp01.png" },
-    { text: 'Gift Card 7', brand: 'Adidas', website: 'adidas.com', image: "public/eGiftedImages/currency_fp01.png" },
-    { text: 'Gift Card 8', brand: 'Adidas', website: 'adidas.com', image: "public/cardsImage/1073601_fp01.png" },
-    { text: 'Gift Card 9', brand: 'Nike', website: 'nike.com', image: "public/cardsImage/1073651_fp01.png" },
-    { text: 'Gift Card 10', brand: 'Adidas', website: 'adidas.com', image: "public/cardsImage/1073683_fp01.png" },
-    { text: 'Gift Card 11', brand: 'Adidas', website: 'adidas.com', image: "public/cardsImage/1073689_fp01.png" },
-    { text: 'Gift Card 12', brand: 'Adidas', website: 'adidas.com', image: "public/cardsImage/1081483_fp01.png" },
+    { text: 'Gift Card 3', brand: 'Ernest jones', website: 'adidas.com', image: "public/cardsImage/1073526_fp01.png" },
+    { text: 'Gift Card 4', brand: 'Primark', website: 'adidas.com', image: "public/cardsImage/1073557_fp01.png" },
+    { text: 'Gift Card 5', brand: 'Virgin', website: 'nike.com', image: "public/cardsImage/1073575_fp01.png" },
+    { text: 'Gift Card 6', brand: 'M&S', website: 'adidas.com', image: "public/cardsImage/1073585_fp01.png" },
+    { text: 'Gift Card 7', brand: 'Ikea', website: 'adidas.com', image: "public/eGiftedImages/currency_fp01.png" },
+    { text: 'Gift Card 8', brand: 'E-Voucher', website: 'adidas.com', image: "public/cardsImage/1073601_fp01.png" },
+    { text: 'Gift Card 9', brand: 'Boots', website: 'nike.com', image: "public/cardsImage/1073651_fp01.png" },
+    { text: 'Gift Card 10', brand: 'WHSmith', website: 'adidas.com', image: "public/cardsImage/1073683_fp01.png" },
+    { text: 'Gift Card 11', brand: 'Stone', website: 'adidas.com', image: "public/cardsImage/1073689_fp01.png" },
+    { text: 'Gift Card 12', brand: 'Habitats', website: 'adidas.com', image: "public/cardsImage/1081483_fp01.png" },
   ];
 
   const [selectedCard, setSelectedCard] = useState(null);

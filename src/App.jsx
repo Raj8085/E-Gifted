@@ -1,97 +1,98 @@
-// import { Button } from './components/ui/button'
+// // import { Button } from './components/ui/button'
 
 
-// import {
-//   Card,
-//   CardContent,
-//   CardDescription,
-//   CardFooter,
-//   CardHeader,
-//   CardTitle,
-// } from "@/components/ui/card"
+// // import {
+// //   Card,
+// //   CardContent,
+// //   CardDescription,
+// //   CardFooter,
+// //   CardHeader,
+// //   CardTitle,
+// // } from "@/components/ui/card"
 
-// const App = () => {
-//   return (
-//     <div className='px-16'>
-//     <Button>Hello shadcn</Button>
-//     <Card>
-//   <CardHeader>
-//     <CardTitle>Card Title</CardTitle>
-//     <CardDescription>Card Description</CardDescription>
-//   </CardHeader>
-//   <CardContent>
-//     <p>Card Content</p>
-//   </CardContent>
-//   <CardFooter>
-//     <p>Card Footer</p>
-//   </CardFooter>
-// </Card>
+// // const App = () => {
+// //   return (
+// //     <div className='px-16'>
+// //     <Button>Hello shadcn</Button>
+// //     <Card>
+// //   <CardHeader>
+// //     <CardTitle>Card Title</CardTitle>
+// //     <CardDescription>Card Description</CardDescription>
+// //   </CardHeader>
+// //   <CardContent>
+// //     <p>Card Content</p>
+// //   </CardContent>
+// //   <CardFooter>
+// //     <p>Card Footer</p>
+// //   </CardFooter>
+// // </Card>
 
-//     </div>
-//   )
-// }
+// //     </div>
+// //   )
+// // }
 
-// export default App
+// // export default App
 
 
-// import '../src/App.css'
-// const AdidasGiftCard = () => {
-//   return (
-//     <div className="gift-card-container">
-//       <div className="gift-card">
+// // import '../src/App.css'
+// // const AdidasGiftCard = () => {
+// //   return (
+// //     <div className="gift-card-container">
+// //       <div className="gift-card">
       
-//         <div className="text">gift card.</div>
-//         <div className="website">adidas.com</div>
-//       </div>
-//       <div className="brand">Adidas</div>
-//     </div>
-//   );
-// };
+// //         <div className="text">gift card.</div>
+// //         <div className="website">adidas.com</div>
+// //       </div>
+// //       <div className="brand">Adidas</div>
+// //     </div>
+// //   );
+// // };
 
-// export default AdidasGiftCard;
+// // export default AdidasGiftCard;
 
-// import GiftCards from "./components/gifts/giftCards";
+// // import GiftCards from "./components/gifts/giftCards";
 
 
-// function App() {
-//   return (
-//     <div className="App">
-//      <GiftCards/>
-//     </div>
-//   );
-// }
+// // function App() {
+// //   return (
+// //     <div className="App">
+// //      <GiftCards/>
+// //     </div>
+// //   );
+// // }
 
-// export default App;
+// // export default App;
 
 
 import "../src/App.css";
-import Navbar from "./components/navbar/navbar";
-import GiftCards from "./components/gifts/giftCards";
-import HeroSection from "./components/HeroSection/heroSection";
-import Footer from "./components/Footer/footer";
-import GiftComponent from "./components/GiftReward/card";
-// import BottomGridComponent from "./components/SecondBottom/secondBottom";
-import SecondBottomGifter from "./components/SecondBottom/bottomCard";
-import RatingFeature from "./components/SecondBottom/ratingFeature";
-import SignIn from "./components/UserCredential/signIn";
+// import Navbar from "./components/navbar/navbar";
+// import GiftCards from "./components/gifts/giftCards";
+// import HeroSection from "./components/HeroSection/heroSection";
+// import Footer from "./components/Footer/footer";
+// import GiftComponent from "./components/GiftReward/card";
+// // import BottomGridComponent from "./components/SecondBottom/secondBottom";
+// import SecondBottomGifter from "./components/SecondBottom/bottomCard";
+// import RatingFeature from "./components/SecondBottom/ratingFeature";
+// import SignIn from "./components/UserCredential/signIn";
 
 
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Rewards from "./components/BuyForBussiness/buyForBusiness";
-import FeatureComparison from "./components/BuyForBussiness/featureComparison";
-import {VisaRewards, HomeVisaRewards, VisaRewardsApi, VisaRewardsReverse } from "./components/BuyForBussiness/VisaRewards";
-import BuyCryptoCards, { BuyCrypto} from "./components/BuyForCrypto/buyForCrypto";
-import GiftCardPayment, { TabLayout } from "./components/PaymentPage/buyGift";
+// import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+// import Rewards from "./components/BuyForBussiness/buyForBusiness";
+// import FeatureComparison from "./components/BuyForBussiness/featureComparison";
+// import {VisaRewards, HomeVisaRewards, VisaRewardsApi, VisaRewardsReverse } from "./components/BuyForBussiness/VisaRewards";
+// import BuyCryptoCards, { BuyCrypto} from "./components/BuyForCrypto/buyForCrypto";
+// import GiftCardPayment, { TabLayout } from "./components/PaymentPage/buyGift";
 // import SignIn from "./components/UserCredential/signIn.jsx"; 
 
 // import { Input } from "@/components/ui/input"
 
 import "../src/components/PaymentPage/tabLayout.css";
-import FrequentAskedQuestions from "./components/PaymentPage/FAQ";
-import { CardWithForm } from "./components/Cards/card";
-import { CardWithFormQr } from "./components/Cards/qrPayment";
 import RoutingApp from "./Routing/routing";
-import GiftCardApp from "./components/PaymentPage/buyGift";
+// import FrequentAskedQuestions from "./components/PaymentPage/FAQ";
+// import { CardWithForm } from "./components/Cards/card";
+// import { CardWithFormQr } from "./components/Cards/qrPayment";
+// import RoutingApp from "./Routing/routing";
+// import GiftCardApp from "./components/PaymentPage/buyGift";
 // const generateSnowflakes = (num) => {
 //   const snowflakes = [];
 //   for (let i = 0; i < num; i++) {
@@ -195,3 +196,40 @@ const App = () => {
 );
 };
 export default App;
+
+
+
+
+
+
+// import { Card, CardContent } from "./components/ui/card"
+// import {
+//   Carousel,
+//   CarouselContent,
+//   CarouselItem,
+//   CarouselNext,
+//   CarouselPrevious,
+// } from "./components/ui/carousel"
+
+// function CarouselDemo() {
+//   return (
+//     <Carousel className="w-[600px]  ml-16">
+//       <CarouselContent>
+//         {Array.from({ length: 5 }).map((_, index) => (
+//           <CarouselItem key={index}>
+//             <div className="p-1">
+//               <Card>
+//                 <CardContent className="flex aspect-square items-center justify-center p-6">
+//                   <span className="text-4xl font-semibold">{index + 1}</span>
+//                 </CardContent>
+//               </Card>
+//             </div>
+//           </CarouselItem>
+//         ))}
+//       </CarouselContent>
+//       <CarouselPrevious />
+//       <CarouselNext />
+//     </Carousel>
+//   )
+// }
+// export default CarouselDemo

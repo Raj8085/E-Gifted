@@ -43,15 +43,18 @@ const BuyCrypto = () => {
         />
         <h1 className="crypto-hero-heading ">
          <h1 className="crypto-hero-subheading"> Buy Gift Cards with Cryptocurrency</h1>
-          <p>
+          <p className="crypto-hero-description">
           Shop from Hundreds of Gift Cards with Cryptocurrency</p>
-          <Link to="/cards">
-          <Button className="mt-16 bg-sky-600 rounded-full">BUY WITH CRYPTOCURRENCY</Button>
-          </Link>
+          {/* <Link to="/cards">
+          <Button className="mt-16 bg-sky-600 rounded-full crypto-hero-button">BUY WITH CRYPTOCURRENCY</Button>
+          </Link> */}
         </h1>
+        <Link to="/cards">
+          <Button className="mt-16 bg-sky-600 rounded-full crypto-hero-button">BUY WITH CRYPTOCURRENCY</Button>
+          </Link>
       </div>
       <div className="app-container">
-      <header className="header">
+      <header className="header-crypto">
         <h1>eGifter Accepts Cryptocurrency for Gift Cards</h1>
         <p>See why eGifter is your best option for Gift Cards with Cryptocurrency</p>
       </header>
@@ -86,13 +89,15 @@ const BuyCryptoCards = () => {
     <div>
          <div className="cards-crypto-container">
     <h1 className="cards-crypto-title">Cards you can buy with Cryptocurrency on eGifter</h1>
-    <div className="cards-crypto-grid ml-36">
+    <div className="cards-crypto-grid flex ml-72">
+
       <ul>
+      <Link to="/cards">
+        <li>Nike</li>
         <li>Adidas</li>
-        <li>Arsenal</li>
-        <li>B&Q</li>
-        <li>Blackwells</li>
-        <li>BoohooMAN</li>
+        <li>Ernest jones</li>
+        <li>Primark</li>
+        {/* <li>BoohooMAN</li>
         <li>Burton</li>
         <li>Caffè Nero</li>
         <li>Cineworld</li>
@@ -102,14 +107,17 @@ const BuyCryptoCards = () => {
         <li>Entertainer</li>
         <li>Farmhouse Inns</li>
         <li>FlystayGift</li>
-        <li>Global Hotel Card</li>
+        <li>Global Hotel Card</li> */}
+        </Link>
       </ul>
       <ul>
-        <li>AirlineGift</li>
-        <li>ASDA</li>
-        <li>Baby Blooms</li>
-        <li>Bloom & Wild</li>
-        <li>Boots</li>
+        <Link to="/cards">
+        <li>Virgin</li>
+        <li>M&S</li>
+        <li>Ikea</li>
+        <li>E-Voucher</li>
+        </Link>
+        {/* <li>Boots</li>
         <li>Butlin by Inspire</li>
         <li>Champneys</li>
         <li>Clarks</li>
@@ -119,14 +127,16 @@ const BuyCryptoCards = () => {
         <li>Eating Inn</li>
         <li>Ernest Jones</li>
         <li>FatFace</li>
-        <li>Foot Locker</li>
+        <li>Foot Locker</li> */}
       </ul>
       <ul>
-        <li>All Bar One</li>
-        <li>Ask Italian</li>
-        <li>Beer52</li>
-        <li>Body Shop</li>
-        <li>Borrow My Doggy</li>
+        <Link to="/cards">
+        <li>Boots</li>
+        <li>WHSmith</li>
+        <li>Stone</li>
+        <li>Habitats</li>
+        </Link>
+        {/* <li>Borrow My Doggy</li>
         <li>Buyagift</li>
         <li>Charity Shop</li>
         <li>Daymade</li>
@@ -136,9 +146,10 @@ const BuyCryptoCards = () => {
         <li>Fayre & Square</li>
         <li>Footasylum</li>
         <li>GlobalGiving</li>
-        <li>Go Ape</li>
+        <li>Go Ape</li> */}
       </ul>
-      <ul>
+    
+      {/* <ul>
         <li>Argos</li>
         <li>B&M</li>
         <li>Bella Italia</li>
@@ -154,7 +165,7 @@ const BuyCryptoCards = () => {
         <li>Flaming Grill</li>
         <li>Global Experiences Card</li>
         <li>Good Night Inns</li>
-      </ul>
+      </ul> */}
     </div>
   </div>
     </div>
