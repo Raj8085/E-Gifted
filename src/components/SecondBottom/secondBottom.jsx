@@ -57,6 +57,7 @@
 // Card.js
 import './secondBottom.css';
 
+// eslint-disable-next-line react/prop-types
 const Card = ({ image, title, description, buttonText }) => {
   return (
     <div className="card">

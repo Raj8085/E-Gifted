@@ -97,11 +97,25 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom"; 
 
 // eslint-disable-next-line react/prop-types
 export function CardWithFormQr({ onBackToCart, price, quantity,name,brand }) {
   const [showQrCard, setShowQrCard] = useState(false);
+
+  const [counter, setCounter] = useState(60);
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (counter > 0) {
+      const timer = setTimeout(() => setCounter(counter - 1), 1000);
+      return () => clearTimeout(timer);
+    } else {
+      // Redirect to the home page when the timer reaches 0
+      navigate("/");
+    }
+  }, [counter, navigate]);
 
   console.log(name,"name is ")
 
@@ -117,12 +131,12 @@ export function CardWithFormQr({ onBackToCart, price, quantity,name,brand }) {
             <CardHeader className="text-center">
               <CardTitle className="text-2xl font-bold">Please review your order</CardTitle>
               <CardDescription className="text-gray-600">
-                Your order details:
-              </CardDescription>
-            </CardHeader>
-            <CardContent>
+  Your order details:
+  
+</CardDescription>
+          </CardHeader><CardContent>
               <div className="flex flex-col items-center space-y-4 w-[500px] ml-20 qr-card-details">
-              <div className="flex flex-col space-y-2 text-center w-3/4">
+                <div className="flex flex-col space-y-2 text-center w-3/4">
                   <Label htmlFor="brand" className="text-lg font-medium text-gray-700">
                     eGift Name:
                   </Label>
@@ -155,12 +169,10 @@ export function CardWithFormQr({ onBackToCart, price, quantity,name,brand }) {
                   <Input
                     id="promo-code"
                     placeholder="Enter your promo code"
-                    className="border border-gray-300 rounded-lg p-2 w-full qr-input"
-                  />
+                    className="border border-gray-300 rounded-lg p-2 w-full qr-input" />
                 </div>
               </div>
-            </CardContent>
-            <CardFooter className="flex justify-between px-4 py-2 qr-button">
+            </CardContent><CardFooter className="flex justify-between px-4 py-2 qr-button">
               <Button variant="outline" className="px-4 py-2">
                 APPLY PROMO CODE
               </Button>
@@ -170,9 +182,14 @@ export function CardWithFormQr({ onBackToCart, price, quantity,name,brand }) {
               </Button>
             </CardFooter>
           </Card>
+        
+
         ) : (
           <Card className="w-[500px] shadow-lg rounded-lg border bg-white">
             <CardHeader className="text-center">
+            <span className="countdown font-mono text-6xl">
+              <span style={{ "--value": counter }}>{counter}</span>
+              </span>
               <CardTitle className="text-2xl font-bold">Scan to Proceed with Payment</CardTitle>
               <CardDescription className="text-gray-600">
                 Use your phone&apos;s camera or a QR code scanner to complete the payment.
@@ -193,6 +210,7 @@ export function CardWithFormQr({ onBackToCart, price, quantity,name,brand }) {
               >
                 BACK TO ORDER
               </Button>
+              
             </CardFooter>
           </Card>
         )}

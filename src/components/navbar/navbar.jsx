@@ -720,7 +720,7 @@ const Navbar = ({ cart }) => {
                  className="inline-block w-5 h-5 mr-2"
                  alt=""
                />
-               Buy Digital Gift <span className="buy-gift">Cards</span>
+               Buy Digital Gift 
              </li>
            </Link>
            <Link to="/businessBuy">
