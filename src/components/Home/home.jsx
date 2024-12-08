@@ -5,6 +5,8 @@ import HeroSection from "../HeroSection/heroSection"
 import SecondBottomGifter from "../SecondBottom/bottomCard"
 import RatingFeature from "../SecondBottom/ratingFeature"
 
+import "../../../src/App.css";
+
 const Home = () => {
 
     const generateSnowflakes = (num) => {

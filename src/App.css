@@ -158,6 +158,32 @@ body {
     width: 35px;
     height: 35px;
   }
+.card-content1{
+    font-size: 1.7rem;
+    margin-right: 10px;
+  }
+  .home-hero-heading{
+    font-size: 2rem;
+    margin: 2rem;
+    font-style: normal;
+  }
+  .home-hero-para{
+    font-size: 1.5rem;
+    margin: 1rem;
+    margin-bottom: -2rem;
+  }
+  .input-card{
+    margin-right: 4rem;
+  
+    }
+    .footer-img {
+      width: 25rem;
+    }
+    .sign-up{
+      size: 1rem;
+    }
+    
+  
 }
 
 /* .divider {
@@ -167,6 +193,39 @@ body {
   margin-top: 30px;
 } */
 
+@media screen and (max-width: 360px) {
+  .hero-heading{
+    font-size: 2rem
+  }
+  .hero-para{
+    font-size: 1.5rem;
+  }
+  .card-content1{
+    font-size: 1.2rem;
+  }
+  .footer-img {
+    width: 20rem;
+  }
+ .main-logo{
+  margin-left: -0.1rem;
+  margin-right: -3rem;
+ }
+  .sign-up{
+    width: 4rem;
+    height: 3.5rem;
+    font-size: 0.9rem;
+
+  }
+  .sign-out{
+    margin-left: -5rem;    
+  }
+  .input-card{
+    margin-right: rem;
+    width: 15rem;
+    font-size: 1rem;
+  }
+  
+}
 
 
 
@@ -176,7 +235,7 @@ body {
 
 body {
   margin: 0;
-  height: 100vh;
+  /* height: 100vh; */
   background: linear-gradient(to bottom, white,white); /* Dark blue gradient */
 }
 

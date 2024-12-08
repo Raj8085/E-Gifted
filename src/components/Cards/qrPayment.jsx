@@ -65,7 +65,7 @@
 //             </CardHeader>
 //             <CardContent className="flex justify-center items-center py-4">
 //               <img
-//                 src="public/eGiftedImages/Qrcode.png"
+//                 src="/eGiftedImages/Qrcode.png"
 //                 alt="QR Code for Payment"
 //                 className="w-48 h-48"
 //               />
@@ -99,6 +99,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom"; 
+import "./card.css";
 
 // eslint-disable-next-line react/prop-types
 export function CardWithFormQr({ onBackToCart, price, quantity,name,brand }) {
@@ -112,7 +113,7 @@ export function CardWithFormQr({ onBackToCart, price, quantity,name,brand }) {
       const timer = setTimeout(() => setCounter(counter - 1), 1000);
       return () => clearTimeout(timer);
     } else {
-      // Redirect to the home page when the timer reaches 0
+      // Redirect to the home page when the timer reaches 0 
       navigate("/");
     }
   }, [counter, navigate]);
@@ -185,19 +186,19 @@ export function CardWithFormQr({ onBackToCart, price, quantity,name,brand }) {
         
 
         ) : (
-          <Card className="w-[500px] shadow-lg rounded-lg border bg-white">
+          <Card className="w-[500px] shadow-lg rounded-lg border bg-white scan-pay">
             <CardHeader className="text-center">
-            <span className="countdown font-mono text-6xl">
+            <span className="countdown font-mono text-6xl count-down">
               <span style={{ "--value": counter }}>{counter}</span>
               </span>
               <CardTitle className="text-2xl font-bold">Scan to Proceed with Payment</CardTitle>
-              <CardDescription className="text-gray-600">
+              <CardDescription className="text-gray-600 pay-description">
                 Use your phone&apos;s camera or a QR code scanner to complete the payment.
               </CardDescription>
             </CardHeader>
             <CardContent className="flex justify-center items-center py-4">
               <img
-                src="public/eGiftedImages/Qrcode.png"
+                src="/eGiftedImages/Qrcode.png"
                 alt="QR Code for Payment"
                 className="w-48 h-48"
               />

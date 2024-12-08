@@ -7,11 +7,11 @@ function RatingFeature() {
       <section className="featured-in">
         <h2 className="text-3xl font-extrabold">Featured In</h2>
         <div className="logos">
-          <img src="public/download (3).svg" className="bg-white text-white" alt="CBS News" />
-          <img src="public/sideBar/download (2).jpeg" className="h-10 w-14" alt="CoinDesk" />
-          <img src="public/sideBar/forbes.svg" alt="Forbes" />
-          <img src="public/download (4).svg" alt="TechCrunch" />
-          <img src="public/download (5).svg" alt="Wall Street Journal"  className="h-10 w-14"/>
+          <img src="/download (3).svg" className="bg-white text-white" alt="CBS News" />
+          <img src="/sideBar/download (2).jpeg" className="h-10 w-14" alt="CoinDesk" />
+          <img src="/sideBar/forbes.svg" alt="Forbes" />
+          <img src="/download (4).svg" alt="TechCrunch" />
+          <img src="/download (5).svg" alt="Wall Street Journal"  className="h-10 w-14"/>
         </div>
       </section>
 

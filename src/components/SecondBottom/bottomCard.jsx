@@ -45,14 +45,14 @@ function SecondBottomGifter() {
       <div className="card-container">
        
         <Card
-          image="public/eGiftedImages/buy-with-bitcoin.png"
+          image="/eGiftedImages/buy-with-bitcoin.png"
           title="Buy Gift Cards with Bitcoin"
           description="Shop from 300+ Brands Using Bitcoin | No Additional Fees with Bitcoin"
           buttonText="SHOP NOW"
           
         />
         <Card
-          image="public/eGiftedImages/egifter-personalization.png"
+          image="/eGiftedImages/egifter-personalization.png"
           title="Send Digital Gift Cards with a Personal Touch"
           description="Customize your gift with an eGreeting Card, photo or video and a personal message."
           buttonText="BUY NOW"

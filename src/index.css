@@ -4,6 +4,10 @@
 
 /* ... */
 
+.body{
+  overflow: hidden;
+}
+
 @layer base {
   :root {
 

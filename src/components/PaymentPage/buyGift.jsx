@@ -1004,17 +1004,17 @@ export default function GiftCardApp({ selectedCard }) {
                </div>
                <div className="flex justify-between mt-12 gap-4 text-sm payment-image">
                  {[
-                   { src: "download (1).png", text: "Use Online" },
-                   { src: "download (2).png", text: "Use In-Store" },
-                   { src: "download.png", text: "Instant Delivery" },
-                   { src: "download (3).png", text: "Secure Payment" },
+                   { src: "/paymentImages/download (1).svg", text: "Use Online" },
+                   { src: "/paymentImages/download.svg", text: "Use In-Store" },
+                   { src: "/paymentImages/download (2).svg", text: "Instant Delivery" },
+                   { src: "/paymentImages/download (3).svg", text: "Secure Payment" },
                  ].map((item, index) => (
                    <div
                      key={index}
                      className="flex items-center border border-gray-300 rounded-2xl bg-gray-100 payment-review"
                    >
                      <img
-                       src={`public/eGiftedImages/${item.src}`}
+                       src={`${item.src}`}
                        alt=""
                        className="w-6 h-6"
                      />
@@ -1038,12 +1038,12 @@ export default function GiftCardApp({ selectedCard }) {
                        </p>
                        <div className="flex w-24 items-center justify-between ml-36 mt-5 payment-review h-10">
                          <img
-                           src="public/eGiftedImages/skrill-text-logo.png"
+                           src="/eGiftedImages/skrill-text-logo.png"
                            alt="skrill"
                           className="h-[300px]"
                          />
                          <img
-                           src="public/eGiftedImages/crypto-icon.png"
+                           src="/eGiftedImages/crypto-icon.png"
                            alt="crypto"
                          />
                        </div>

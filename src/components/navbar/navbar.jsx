@@ -557,8 +557,9 @@ import "../../../src/App.css";
 import {Link, useNavigate } from "react-router-dom";
 import { Button } from "../ui/button";
 import { useEffect, useRef, useState } from "react";
-
+import "../../../src/App.css";
 import PropTypes from 'prop-types';
+import { MenubarDemo } from "./Menu";
 
 
 // eslint-disable-next-line react/prop-types
@@ -619,29 +620,23 @@ const Navbar = ({ cart }) => {
     <div>
       <nav className="bg-white shadow-md fixed top-0 left-0 w-full z-50 p-2">
       <div className="max-w-7xl mx-auto px-4 sm:px-8 lg:px-8 flex items-center justify-between h-12 ">
+      <MenubarDemo className="menu-bar"/>
+
           {/* Logo */}
           <Link to="/" className="">
             <img
               src="/eGiftedImages/eGifter.svg"
-              className="h-8 w-auto ml-16"
+              className="h-8 w-auto ml-16 main-logo"
               alt="Logo"
             />
           </Link>
 
+       
+
+
           {/* Menu Icon in the center */}
           <div
-            className={`menu-icon ${isDrawerOpen ? "cross-icon" : ""}`}
-            onClick={toggleDrawer}
-            ref={menuIconRef} 
-            style={{
-              position: "absolute",
-              left: "5%",
-              transform: "translateX(-50%)",
-            }}
-          >
-            <div></div>
-            <div></div>
-            <div></div>
+           >
           </div>
       {/* <div
            className={`menu-icon ${isDrawerOpen ? "cross-icon" : ""}`}
@@ -675,7 +670,7 @@ const Navbar = ({ cart }) => {
 
           <div className="flex items-center space-x-4">
             {userName ? (
-              <div className="flex items-center space-x-4">
+              <div className="flex items-center space-x-4 sign-out">
                 <span className="user-name rounded-full text-sm md:text-base">
                   Welcome, {userName}
                 </span>
@@ -685,74 +680,18 @@ const Navbar = ({ cart }) => {
               </div>
             ) : (
               <Link to="/signin">
-                <button className=" bg-blue-500 text-white px-4 py-2 rounded-full hover:bg-blue-600 transition">
+                {/* <button className=" bg-blue-500 text-white px-4 py-2 rounded-full hover:bg-blue-600 transition sign-up">
                   Sign Up
-                </button>
+                </button> */}
+                <Button>Sign up</Button>
               </Link>
             )}
 
-            {/* <Link to="/cards"> */}
-            {/* <div className=" cursor-pointer" onClick={showCart}>
-              <img
-                src="/eGiftedImages/cartIcon.svg"
-                alt="Cart"
-                className="cart-icon h-8 cursor-pointer"
-               
-              />
-              {cart.length > 0 && (
-                <div className="cart-item-count absolute top-0 mt-4 ml-6 h-4 w-4 rounded-full bg-red-500 text-white text-xs flex items-cen  ter justify-center">
-                  {cart.length}
-                </div>
-              )}
-              </div> */}
-            {/* </Link> */}
+           
           </div>
         </div>
       </nav>
-      <div className={`drawer ${isDrawerOpen ? "open" : ""}`}
-       ref={sidebarRef}
-      >
-         <ul>
-           <Link to="/cards">
-             <li>
-               <img
-                 src="public/sideBar/download (4).png"
-                 className="inline-block w-5 h-5 mr-2"
-                 alt=""
-               />
-               Buy Digital Gift 
-             </li>
-           </Link>
-           <Link to="/businessBuy">
-           <li>
-             <img
-               src="public/sideBar/download (3).png"
-               className="inline-block w-5 h-5 mr-2"
-               alt=""
-             />
-             Buy For Business
-           </li>
-           </Link>
-           <Link to="/crypto">
-           <li>
-             <img
-               src="public/sideBar/download (2).png"
-               alt=""
-               className="inline-block w-5 h-5 mr-2"
-             />
-             Buy With Crypto
-           </li>
-           </Link>
-           {/* <li>
-             <img
-               src="public/sideBar/download.png"
-               alt=""
-               className="inline-block w-5 h-5 mr-2"
-             />
-             Order Status
-           </li> */}
-         </ul>
-      </div>
+      
     </div>
   );
 };

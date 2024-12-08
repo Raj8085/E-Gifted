@@ -3,6 +3,7 @@
     margin: 0 auto;
     font-family: Arial, sans-serif;
     margin-top: 10px;
+    margin-bottom: 5rem;
   }
   
   .header {
@@ -43,6 +44,26 @@
 
 @media screen and (max-width: 768px) {
   .feature-comparison-container{
-    margin-top: 450px;
+    margin-top: 55rem;
+    margin-bottom: 5rem;
   }
+}
+
+@media  screen and (max-width: 480px) {
+  .feature-comparison-container{
+    margin-top: 50rem;
+    font-weight: bolder;
+    margin-bottom: 4rem;
+  }
+  .logo{
+    width: 600px;
+    height: 30px;
+    color: white;
+  }
+}
+@media (max-width: 360px) {
+  .feature-comparison-container{
+    margin-top: 70rem;
+  }
+
 }

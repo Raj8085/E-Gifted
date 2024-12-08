@@ -1,0 +1,16 @@
+.qr-code{
+    margin-right: 3rem;
+}
+.scan-pay{
+    margin-right: 2rem;
+}
+
+
+@media screen and (max-width: 360px) {
+    .count-down{
+        margin: 4rem;
+    }
+    .pay-description{
+        margin: 3rem;
+    }
+}

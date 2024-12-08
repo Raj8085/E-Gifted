@@ -204,6 +204,7 @@
 
 
 
+import "../../../src/App.css"
 
 
 
@@ -259,14 +260,14 @@ const Footer = () => {
   </nav>
 </footer>
 <footer className="footer bg-base-200 text-base-content border-base-300 border-t px-10 py-4">
-  <div className="grid-flow-col items-center w-[600px]">
-           <img src="public/footerImage/bitcoin-text-logo.png" alt="Bitcoin" />
-           <img src="public/footerImage/bitcoincash-text-logo.png" alt="Bitcoin Cash" />
-           <img src="public/footerImage/ethereum-text-logo.png" alt="Ethereum" />
-           <img src="public/footerImage/litecoin-text-logo.png" alt="Litecoin" />
-           <img src="public/footerImage/dogecoin-text-logo.png" alt="Dogecoin" />
-           <img src="public/footerImage/shiba-inu-text-logo.png" alt="Shiba Inu" />
-           <img src="public/eGiftedImages/skrill-text-logo.png" alt="Skrill" />
+  <div className="grid-flow-col items-center w-[600px] footer-img">
+           <img src="/footerImage/bitcoin-text-logo.png" alt="Bitcoin" />
+           <img src="/footerImage/bitcoincash-text-logo.png" alt="Bitcoin Cash" />
+           <img src="/footerImage/ethereum-text-logo.png" alt="Ethereum" />
+           <img src="/footerImage/litecoin-text-logo.png" alt="Litecoin" />
+           <img src="/footerImage/dogecoin-text-logo.png" alt="Dogecoin" />
+           <img src="/footerImage/shiba-inu-text-logo.png" alt="Shiba Inu" />
+           <img src="/eGiftedImages/skrill-text-logo.png" alt="Skrill" />
            </div>
   {/* <aside className="grid-flow-col items-center">
     <svg
@@ -289,20 +290,20 @@ const Footer = () => {
   <nav className="md:place-self-center md:justify-self-end">
     <div className="grid grid-flow-col gap-4">
     <a>
-       <img src="public/eGiftedImages/en_badge_web_generic.png" alt="" className="w-32 "/>
+       <img src="/eGiftedImages/en_badge_web_generic.png" alt="" className="w-32 "/>
       </a>
       <a>
-       <img src="public/eGiftedImages/download_on_the_app_store_badge_en_rgb_blk.jpeg" alt="" className="w-28"/>
+       <img src="/eGiftedImages/download_on_the_app_store_badge_en_rgb_blk.jpeg" alt="" className="w-28"/>
       </a>
       <a>
-       <img src="public/socialMedia/egifter-social-icon.png" alt="" className="w-16"/>
+       <img src="/socialMedia/egifter-social-icon.png" alt="" className="w-16"/>
       </a>
       <a>
-       <img src="public/socialMedia/facebook-social-icon.png" alt="" className="w-16"/>
+       <img src="/socialMedia/facebook-social-icon.png" alt="" className="w-16"/>
         
       </a>
       <a>
-      <img src="public/socialMedia/instagram-social-icon.png" alt="" className="w-16"/>
+      <img src="/socialMedia/instagram-social-icon.png" alt="" className="w-16"/>
        
       </a>
     </div>

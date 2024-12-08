@@ -30,22 +30,23 @@
 
 
   @media (max-width: 1024px) {
-    .crypto-hero-heading {
+    /* .crypto-hero-heading {
     font-size: 10px;
-    }
+    } */
 
     .crypto-hero-subheading {
-      font-size: 50px; /* Adjust subheading size */
+      font-size: 50px; 
     }
   }
 
+
+
   @media (max-width: 768px) {
-    .crypto-hero-heading {
-      /* font-size: 10px;  */
+    /* .crypto-hero-heading {
       white-space: normal; 
       margin-top: 15px;
      
-    }
+    } */
     /* .crypto-hero-button{
       margin-top: 200px;
 
@@ -65,15 +66,88 @@
     }
   }
 
+
+  
   @media (max-width: 480px) {
-    .crypto-hero-heading {
-      font-size: 18px; /* Smallest font size for extra small screens */
-    }
+    /* .crypto-hero-heading {
+      font-size: 18px; 
+    } */
 
     .crypto-hero-subheading {
       font-size: 30px; /* Adjust subheading size for extra small screens */
     }
   }
+
+
+  @media (max-width: 1199px), (max-width: 1023px), (max-width: 767px), 
+       (max-width: 480px), (max-width: 430px), (max-width: 414px), 
+       (max-width: 390px), (max-width: 375px) {
+  .crypto-hero-heading {
+    font-size: 18px; /* Default adjustment for all */
+  }
+  .crypto-hero-image{ 
+    height: 400px;
+}
+
+}
+
+@media (max-width: 1023px) {
+  .crypto-hero-heading {
+    font-size: 10px;
+  }
+  .crypto-hero-image{ 
+    height: 400px;
+}
+
+}
+
+@media (max-width: 767px) {
+  
+  .crypto-hero-heading {
+    html, body {
+      touch-action: pan-y; 
+      overflow-x: hidden; 
+    }
+    white-space: normal;  
+    font-size: 28px;
+    margin-top: 22px;
+  }
+  .crypto-hero-image{ 
+    height: 400px;
+}
+
+}
+
+@media (max-width: 480px) {
+  html, body {
+    touch-action: pan-y; 
+    overflow-x: hidden; 
+  }
+  
+  .crypto-hero-heading { 
+    font-size: 24px;
+  padding-top: 70px;
+  }
+  .crypto-hero-image{ 
+    height: 400px; 
+}
+
+}
+
+@media (max-width: 375px) {
+  html, body {
+    touch-action: pan-y; /* Only allow vertical scrolling */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+  }
+  
+  .crypto-hero-heading {
+    font-size: 2px;
+  }
+  .crypto-hero-image{ 
+    height: 400px;
+}
+
+}
 
 
 

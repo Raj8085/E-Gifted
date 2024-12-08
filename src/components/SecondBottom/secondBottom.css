@@ -176,8 +176,9 @@
   background-color: #0056b3;
 }
 
-@media screen and (max-width: 768px) {
-  .card-description{
-    
+@media screen and (max-width: 480px) {
+  .card-container{
+    display:grid;
+    grid-template-columns: 1fr;
   }
 }

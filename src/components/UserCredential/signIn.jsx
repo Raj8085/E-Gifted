@@ -201,7 +201,7 @@ function SignIn() {
           <div className="social-login-buttons">
             <button className="social-button apple">
               <img
-                src="public/socialMedia/apple-logo-black.svg"
+                src="/socialMedia/apple-logo-black.svg"
                 alt=""
                 className="h-4 w-5"
               />
@@ -220,7 +220,7 @@ function SignIn() {
 
             <button className="social-button google">
               <img
-                src="public/socialMedia/google-colored-logo.svg"
+                src="/socialMedia/google-colored-logo.svg"
                 alt=""
                 className="h-4 w-5"
               />
@@ -228,7 +228,7 @@ function SignIn() {
             </button>
             <button className="social-button facebook">
               <img
-                src="public/socialMedia/download (1).svg"
+                src="/socialMedia/download (1).svg"
                 className="h-4 w-5"
                 alt=""
               />
@@ -236,7 +236,7 @@ function SignIn() {
             </button>
             <button className="social-button amazon">
               <img
-                src="public/socialMedia/download (2).svg"
+                src="/socialMedia/download (2).svg"
                 className="h-4 w-5"
                 alt=""
               />

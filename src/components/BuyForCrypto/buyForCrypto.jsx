@@ -7,28 +7,28 @@ const BuyCrypto = () => {
         {
           title: "Desktop & Mobile Web",
           description: "Use Cryptocurrency to buy Gift Cards at eGifter.com.",
-          image : "public/eGiftedImages/crypto_001.png",
+          image : "/eGiftedImages/crypto_001.png",
         },
         {
           title: "1,000+ Brands",
           description: "1,000+ Gift Cards are available for purchase with Cryptocurrency.",
-          image: "public/eGiftedImages/crypto_002-no-number.png",
+          image: "/eGiftedImages/crypto_002-no-number.png",
         },
         {
           title: "No Additional Fees",
           description: "Simple checkout process with no additional fees.",
-          image: "public/eGiftedImages/crypto_003.png",
+          image: "/eGiftedImages/crypto_003.png",
         },
         {
           title: "Fast Transactions",
           description: "Cryptocurrency offers fast and secure payments.",
-          image: "public/eGiftedImages/crypto_004.png",
+          image: "/eGiftedImages/crypto_004.png",
           
         },
         {
             title: "Find Answers",
             description: "Got questions? We've got answers in our.",
-          image: "public/eGiftedImages/crypto_006.png",
+          image: "/eGiftedImages/crypto_006.png",
             
           },
           
@@ -37,7 +37,7 @@ const BuyCrypto = () => {
         <>
       <div className="crypto-hero-container">
         <img
-          src="public/eGiftedImages/crypto-hero-image.png"
+          src="/eGiftedImages/crypto-hero-image.png"
           alt="Crypto Hero"
           className="crypto-hero-image"
         />

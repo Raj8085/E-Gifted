@@ -51,6 +51,7 @@
 
 
 import GridComponent from '../../components/GiftReward/giftReward';
+import "../../../src/App.css";
 
 function GiftComponent() {
   return (
@@ -83,7 +84,7 @@ function GiftComponent() {
 
 <GridComponent
   title={
-    <>
+    <div className='card-content1'>
       <span className="">
         The Gift Card Rewards
       </span>
@@ -95,7 +96,7 @@ function GiftComponent() {
       <span className="text-blue-600 font-semibold sm:mr-16 block">
         try eGifter Rewards™
       </span>
-    </>
+    </div>
   }
   extraClasses="h-110"
   showButton={true}

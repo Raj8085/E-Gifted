@@ -1,324 +1,143 @@
-/* .visa-rewards-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 40px;
-    margin: 0 auto;
-    max-width: 1200px;
+/* General Styles */
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+/* Container Styles */
+.visa-rewards-all1, .visa-rewards-all2, .visa-rewards-all3 {
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+.visa-rewards-all{
+  margin-top: 3rem;
+}
+
+/* Heading Styles */
+.visa-rewards-heading1, .visa-rewards-heading2, .visa-rewards-heading3 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #2c3e50;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.visa-rewards-subheading1, .visa-rewards-subheading-reverse2 {
+  font-size: 1.5rem;
+  color: #16a085;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+/* Container Layout */
+.visa-rewards-container1, .visa-rewards-container2, .visa-rewards-container3 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Text Section */
+.visa-text-section1, .visa-text-section2, .visa-text-section3 {
+  flex: 1;
+  padding: 10px;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #555;
+}
+
+.visa-text-section1 strong, 
+.visa-text-section2 span.bold-text, 
+.visa-text-section3 span.bold-text {
+  color: #e74c3c;
+  font-weight: bold;
+}
+
+/* Image Section */
+.visa-image-section1, .visa-image-section2, .visa-image-section3 {
+  flex: 1;
+  text-align: center;
+}
+
+.reward-card-image1, .reward-card-image2, .reward-card-image3 {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.visa-rewards-paragraph-p0{
+  margin: 3rem;
+  font-size: 1.5rem;
+}
+.business-buy{
+  margin: 3rem;
+}
+.image-reward{
+  margin: 2rem;
+}
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .visa-rewards-container1, .visa-rewards-container2, .visa-rewards-container3 {
+    flex-direction: column;
   }
-  
-  .visa-text-section {
-    flex: 1;
-    margin-right: 20px;
-  }
-  
-  .visa-text-section h1 {
-    font-size: 32px;
-    font-weight: bold;
-    margin-bottom: 10px;
-  }
-  
-  .visa-text-section h2 {
-    font-size: 20px;
-    color: #555;
-    margin-bottom: 20px;
-  }
-  
-  .visa-text-section p {
-    font-size: 16px;
-    line-height: 1.6;
-    color: #333;
-    margin-bottom: 20px;
-  }
-  
-  .visa-image-section {
-    flex: 1;
-    text-align: right;
-  }
-  
-  .reward-card-image {
-    max-width: 400px; 
+
+  .visa-text-section1, .visa-text-section2, .visa-text-section3,
+  .visa-image-section1, .visa-image-section2, .visa-image-section3 {
     width: 100%;
-    height: auto;
-  }
-   */
-
-/* 
-
-
-   .visa-rewards-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 40px 20px;
-    gap: 40px;
-  }
-  
-  .visa-rewards-container-api {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin-left: 250px;
-    padding: 40px 20px;
-    gap: 40px;  
-  }
-  
-  .visa-text-section {
-    flex: 1;
-    padding-right: 20px;
-  }
-
-  .visa-text-section p {
-    font-size: 25px;
-  }
-  
-  .main-heading {
-    font-size: 36px;
-    font-weight: bold;
-    margin-bottom: 10px;
-    line-height: 1.4;
-    color: #000;
-  }
-  
-  .sub-heading {
-    font-size: 20px;
-    color: #555;
-    margin-bottom: 20px;
-  }
-  
-  .description {
-    font-size: 16px;
-    line-height: 1.8;
-    color: #333;
-    margin-bottom: 20px;
-  }
-  
-  .visa-image-section {
-    flex: 1;
-    text-align: center; 
-  }
-  
-  .reward-card-image {
-    max-width: 700px;
-    width: 100%;
-    height: auto;
-  }
-  
-  .visa-rewards-heading{
-    font-size: 35px;
-    display: flex;
-    justify-content: center;
-    font-weight: bolder;
-    font-family:Arial, Helvetica, sans-serif;
-  }
-
-  .visa-rewards-subheading{
-    font-size: 25px;
-    display: flex;
-    justify-content: center;
-    font-weight:lighter;
-  }
-
-  .visa-rewards-subheading-reverse{
-    font-size: 18px;
-    display: flex;
-    justify-content: center;
-    font-style: oblique;
-    
-  }
-
- .bold-text{
-    font-weight: bolder;
- }
- .reward-card-image-api {
-    max-width: 350px;
-    width: 100%;
-    height: auto;
-  }
-
-  .bold-text-api{
-    font-weight: bold;
-    font-size: 35px;
- } */
-
-
-
-
-
-
-
-/* Default Styles (for larger screens) */
-.visa-rewards-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 40px 20px;
-    gap: 40px;
-  }
-  
-  .visa-rewards-container-api {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin-left: 250px;
-    padding: 40px 20px;
-    gap: 40px;
-  }
-  
-  .visa-text-section {
-    flex: 1;
-    padding-right: 20px;
-  }
-  
-  .visa-text-section p {
-    font-size: 25px;
-  }
-  
-  .main-heading {
-    font-size: 36px;
-    font-weight: bold;
-    margin-bottom: 10px;
-    line-height: 1.4;
-    color: #000;
-  }
-  
-  .sub-heading {
-    font-size: 20px;
-    color: #555;
-    margin-bottom: 20px;
-  }
-  
-  .description {
-    font-size: 16px;
-    line-height: 1.8;
-    color: #333;
-    margin-bottom: 20px;
-  }
-  
-  .visa-image-section {
-    flex: 1;
     text-align: center;
   }
-  
-  .reward-card-image {
-    max-width: 700px;
-    width: 100%;
-    height: auto;
-  }
-  
-  .visa-rewards-heading {
-    font-size: 35px;
-    display: flex;
-    justify-content: center;
-    font-weight: bolder;
-    font-family: Arial, Helvetica, sans-serif;
-  }
-  
-  .visa-rewards-subheading {
-    font-size: 25px;
-    display: flex;
-    justify-content: center;
-    font-weight: lighter;
-  }
-  
-  .visa-rewards-subheading-reverse {
-    font-size: 18px;
-    display: flex;
-    justify-content: center;
-    font-style: oblique;
-  }
-  
-  .bold-text {
-    font-weight: bolder;
-  }
-  
-  .reward-card-image-api {
-    max-width: 350px;
-    width: 100%;
-    height: auto;
-  }
-  
-  .bold-text-api {
-    font-weight: bold;
-    font-size: 35px;
+
+  .visa-rewards-heading1, .visa-rewards-heading2, .visa-rewards-heading3 {
+    font-size: 2rem;
   }
 
-  .visa-rewards-all{
-    margin-top: 100px;
+  .visa-rewards-subheading1, .visa-rewards-subheading-reverse2 {
+    font-size: 1.3rem;
   }
-  
-  /* Responsive Styles for Tablets (768px and smaller) */
-  @media (max-width: 768px) {
-    .visa-rewards-container,
-    .visa-rewards-container-api {
-      flex-direction: column; /* Stack elements vertically */
-      align-items: center;
-      text-align: center; /* Center-align text */
-      margin: 0 auto;
-    }
-  
-    .visa-text-section {
-      padding-right: 0;
-      margin-bottom: 20px; /* Add spacing between text and image */
-    }
-  
-    .visa-text-section p {
-      font-size: 20px; /* Reduce text size for readability */
-    }
-  
-    .visa-rewards-heading {
-      font-size: 28px; /* Adjust heading size */
-    }
-  
-    .visa-rewards-subheading,
-    .visa-rewards-subheading-reverse {
-      font-size: 18px; /* Adjust subheading size */
-    }
-  
-    .reward-card-image,
-    .reward-card-image-api {
-      max-width: 90%; /* Limit image size on smaller screens */
-    }
-    .image-reward{
-      margin-right: 20px;
-    }
+
+  .visa-text-section1, .visa-text-section2, .visa-text-section3 {
+    font-size: 1rem;
   }
-  
+  .image-reward{
+    margin-bottom: -5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .visa-rewards-heading1, .visa-rewards-heading2, .visa-rewards-heading3 {
+    font-size: 1.8rem;
+  }
+
+  .visa-rewards-subheading1, .visa-rewards-subheading-reverse2 {
+    font-size: 1.1rem;
+  }
+
+  .visa-text-section1, .visa-text-section2, .visa-text-section3 {
+    font-size: 0.95rem;
+  }
+
+  .visa-rewards-all1, .visa-rewards-all2, .visa-rewards-all3 {
+    padding: 20px;
+  }
+  .image-reward{
+    margin-bottom: -10rem;
+  }
+}
 
 
-
-  
-  /* Responsive Styles for Mobile (480px and smaller) */
-  @media (max-width: 480px) {
-    .visa-rewards-container,
-    .visa-rewards-container-api {
-      padding: 20px 10px;
-      gap: 20px; /* Reduce spacing */
-    }
-  
-    .visa-rewards-heading {
-      font-size: 24px; /* Smaller font size for headings */
-    }
-  
-    .visa-rewards-subheading,
-    .visa-rewards-subheading-reverse {
-      font-size: 16px; /* Smaller font size for subheadings */
-    }
-  
-    .visa-text-section p {
-      font-size: 18px; /* Scale down text */
-    }
-  
-    .reward-card-image,
-    .reward-card-image-api {
-      max-width: 100%; /* Full width on small screens */
-      margin-bottom: 20px; /* Add spacing below images */
-    }
+@media screen and (max-width: 360px) {
+  .business-buy{
+    margin: -0.5rem;
+    margin-top: 2rem;
   }
-  
+}
+
+

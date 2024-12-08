@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
 import '../../../src/App.css';
-import { Button } from '../ui/button';
 
 const HeroSection = () => {
   const [imageUrl, setImageUrl] = useState('https://egsiteassets.images.egifter.com/Images/GiftCardFaceplates/External/UBER_fp01.png?width=300&height=190');
@@ -38,7 +37,7 @@ const HeroSection = () => {
       <div className="grid-item-text-content">
         <h1 className='text-5xl font-bold hero-heading'>Buy & Send Gift Cards Instantly With Crypto</h1>
         <p className='mt-8 text-3xl hero-para'>Buy premium gift cards with Cryptocurrency.</p>
-        <input placeholder='Search for brands or products' className='w-96 h-12 mt-8 rounded-full cursor-pointer'/>  
+        <input placeholder='Search for brands or products' className='w-96 h-12 mt-8 rounded-full cursor-pointer input-field'/>  
         {/* <Button></Button> */}
       </div>
       

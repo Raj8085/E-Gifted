@@ -19,9 +19,6 @@
 //   );
 // }
 
-import { Link } from "react-router-dom";
-import { Button } from "../ui/button";
-
 
 
 // export default GiftRewards;
@@ -54,7 +51,8 @@ import { Button } from "../ui/button";
 
 
 
-const GridComponent = ({ title, image, extraClasses = '' , showButton = false}) => {
+// eslint-disable-next-line react/prop-types
+const GridComponent = ({ title, image, extraClasses = ''}) => {
   return (
     <div className={`bg-white rounded-lg  p-6 flex flex-col items-center ${extraClasses}`}>
       {/* Display image if provided */}
