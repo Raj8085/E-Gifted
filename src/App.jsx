@@ -87,6 +87,8 @@ import "../src/App.css";
 // import { Input } from "@/components/ui/input"
 
 import "../src/components/PaymentPage/tabLayout.css";
+import GiftCards from "./components/gifts/giftCards";
+import { OfferBanner } from "./components/navbar/navbar";
 import RoutingApp from "./Routing/routing";
 // import FrequentAskedQuestions from "./components/PaymentPage/FAQ";
 // import { CardWithForm } from "./components/Cards/card";
@@ -137,7 +139,7 @@ import RoutingApp from "./Routing/routing";
 const App = () => {
   return( 
     <>
-
+                {/* <OfferBanner/> */}
     {/* <Router>
      <Navbar/>
       <Routes>

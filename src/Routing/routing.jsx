@@ -3,7 +3,7 @@ import Home from "@/components/Home/home";
 import BuyBusinessCards from "@/components/navbar/buyBusinessCards";
 import BuyGiftCards from "@/components/navbar/buyGiftCards";
 import BuyGiftCrypto from "@/components/navbar/buyGiftCrypto";
-import Navbar from "@/components/navbar/navbar";
+import Navbar, { OfferBanner } from "@/components/navbar/navbar";
 import GiftCardApp from "@/components/PaymentPage/buyGift";
 import SignIn from "@/components/UserCredential/signIn";
 import {
@@ -17,7 +17,9 @@ function RoutingApp() {
     return (
         <>
             <Router>
+                <OfferBanner/>
                 <Navbar/>
+
                 <Routes>
                     <Route path="/" element={<Home/>} />
                     <Route path="/crypto" element={<BuyGiftCards/>} />

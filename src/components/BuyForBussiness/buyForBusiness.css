@@ -88,26 +88,27 @@
     }
   }
 
-  @media (max-width: 480px),(max-width: 320px),(max-width: 1024px),(max-width: 1199px),(max-width: 767px),(max-width: 480px),(max-width: 430px),
-  (max-width: 414px),(max-width: 390px),(max-width: 375px)
+  @media (max-width: 480px)
   {
     .rewards-grid {
       grid-template-columns: 1fr; /* Stacks items vertically on smaller screens */
     }
-    .rewards-header{
-      margin-top: 760px;
-    }
+   
     .reward-item h2,p{
       font-size: 20px;
       font-style: italic
     }
-    .rewards-container{
-      margin-bottom: -14rem;
-    }
+   
   }
   
   @media (max-width: 360px) {
     .rewards-header{
       margin-top: 70rem;
+    }
+  }
+
+  @media (max-width: 667px) {
+    .rewards-header{
+      margin-top: 60rem;
     }
   }

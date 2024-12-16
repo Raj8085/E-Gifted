@@ -1,11 +1,13 @@
 import Footer from "../Footer/footer"
-import GiftComponent from "../GiftReward/card"
+import GiftComponent, { GroupGiftEnd, GroupGiftSectionEnd } from "../GiftReward/card"
 import GiftCards from "../gifts/giftCards"
 import HeroSection from "../HeroSection/heroSection"
 import SecondBottomGifter from "../SecondBottom/bottomCard"
 import RatingFeature from "../SecondBottom/ratingFeature"
 
 import "../../../src/App.css";
+import SnowEffect from "../HeroSection/SnowEffect/SnowEffect"
+import GroupGiftSection from "../GiftReward/GroupGiftSection"
 
 const Home = () => {
 
@@ -52,14 +54,17 @@ const Home = () => {
   return (
     <div>
          <HeroSection/>
-  <div className="snow-container">{generateSnowflakes(15)}</div>
-  <div className="mt-10 mb-24">
+  {/* <div className="snow-container">{generateSnowflakes(15)}</div> */}
+  <div className="mt-20 mb-24">
   <h1 className="flex items-center justify-center text-5xl font-semibold home-hero-heading">Shop from Hundreds of Gift Cards</h1>
   <p className="flex items-center justify-center mt-5 mb-8 text-3xl home-hero-para">Buy,Send And Claim Gifts Cards. Chip in with Friends. Store and Manage Gift Cards.</p>
   </div>
     <GiftCards/>
     {/* <GiftCardsDuplicate/> */}
     <GiftComponent/>
+    <GroupGiftSection/>
+    <GroupGiftSectionEnd/>
+    <GroupGiftEnd/>
     <SecondBottomGifter/>
     <RatingFeature/>
     <Footer/>

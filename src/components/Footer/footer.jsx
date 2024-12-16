@@ -210,7 +210,7 @@ import "../../../src/App.css"
 
 const Footer = () => {
   return (
-    <div className=" bg-base-200 ">
+    <div className="bg-base-200">
       <footer className="footer text-base-content p-10">
   <nav>
     <h6 className="footer-title">For Consumers</h6>
@@ -259,7 +259,7 @@ const Footer = () => {
     
   </nav>
 </footer>
-<footer className="footer bg-base-200 text-base-content border-base-300 border-t px-10 py-4">
+<footer className="footer bg-base-200 text-base-content border-base-300 border-t px-10 py-4 footer-image-social">
   <div className="grid-flow-col items-center w-[600px] footer-img">
            <img src="/footerImage/bitcoin-text-logo.png" alt="Bitcoin" />
            <img src="/footerImage/bitcoincash-text-logo.png" alt="Bitcoin Cash" />
@@ -287,8 +287,8 @@ const Footer = () => {
       Providing reliable tech since 1992
     </p>
   </aside> */}
-  <nav className="md:place-self-center md:justify-self-end">
-    <div className="grid grid-flow-col gap-4">
+  <nav className="">
+    <div className="grid grid-flow-col gap-4 social-media">
     <a>
        <img src="/eGiftedImages/en_badge_web_generic.png" alt="" className="w-32 "/>
       </a>

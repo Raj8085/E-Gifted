@@ -1,0 +1,146 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    background: #002244; /* Dark winter background */
+    height: 100%;
+    /* overflow: hidden; */
+    font-family: sans-serif;
+}
+
+/* .snowflakes {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; 
+    overflow: hidden;
+} */
+
+.snowflake {
+    position: absolute;
+    top: -10px;
+    color: #ffffff;
+    font-size: calc(1rem + 0.5rem * var(--size)); /* Varying size */
+    opacity: var(--opacity); /* Randomized opacity */
+    animation: fall linear infinite;
+    animation-duration: calc(5s + 5s * var(--duration)); /* Varying speed */
+    left: calc(var(--position) * 100%); /* Random horizontal position */
+  }
+  
+  /* Keyframes for snowflake animation */
+  @keyframes fall {
+    0% {
+      transform: translateY(-50px);
+    }
+    100% {
+      transform: translateY(110vh);
+    }
+  }
+  
+
+.snowflake {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; 
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 10; 
+}
+
+/* Create multiple keyframes to vary the fall speed and position for each snowflake */
+@keyframes fall {
+    0% {
+        transform: translateY(-50px);
+    }
+    100% {
+        transform: translateY(110vh);
+    }
+}
+
+/* Use nth-child selectors to create slight variations in size, horizontal position, and duration */
+.snowflake:nth-child(1) {
+    left: 10%;
+    font-size: 0.8rem;
+    animation-duration: 8s;
+}
+.snowflake:nth-child(2) {
+    left: 20%;
+    font-size: 1rem;
+    animation-duration: 10s;
+}
+.snowflake:nth-child(3) {
+    left: 30%;
+    font-size: 0.9rem;
+    animation-duration: 9.5s;
+}
+.snowflake:nth-child(4) {
+    left: 40%;
+    font-size: 1.1rem;
+    animation-duration: 11s;
+}
+.snowflake:nth-child(5) {
+    left: 50%;
+    font-size: 0.7rem;
+    animation-duration: 9s;
+}
+.snowflake:nth-child(6) {
+    left: 60%;
+    font-size: 0.8rem;
+    animation-duration: 12s;
+}
+.snowflake:nth-child(7) {
+    left: 70%;
+    font-size: 1rem;
+    animation-duration: 10s;
+}
+.snowflake:nth-child(8) {
+    left: 80%;
+    font-size: 1.2rem;
+    animation-duration: 13s;
+}
+.snowflake:nth-child(9) {
+    left: 90%;
+    font-size: 0.9rem;
+    animation-duration: 9s;
+}
+.snowflake:nth-child(10) {
+    left: 15%;
+    font-size: 1.1rem;
+    animation-duration: 10.5s;
+}
+.snowflake:nth-child(11) {
+    left: 25%;
+    font-size: 1rem;
+    animation-duration: 12s;
+}
+.snowflake:nth-child(12) {
+    left: 35%;
+    font-size: 0.85rem;
+    animation-duration: 11.5s;
+}
+.snowflake:nth-child(13) {
+    left: 45%;
+    font-size: 1rem;
+    animation-duration: 8.5s;
+}
+.snowflake:nth-child(14) {
+    left: 55%;
+    font-size: 0.75rem;
+    animation-duration: 10s;
+}
+.snowflake:nth-child(15) {
+    left: 65%;
+    font-size: 1.05rem;
+    animation-duration: 12.5s;
+}
+.snowflake:nth-child(16) {
+    left: 75%;
+    font-size: 1.15rem;
+    animation-duration: 14s;
+}
+
+/* Adjusting responsiveness - since percentages are used for positions and vh for animation,
+   the effect naturally scales to different screen sizes. */

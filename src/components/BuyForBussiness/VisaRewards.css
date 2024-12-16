@@ -76,7 +76,12 @@ body {
 .visa-rewards-paragraph-p0{
   margin: 3rem;
   font-size: 1.5rem;
+  
 }
+.visa-rewards-paragraph-p{
+  margin-left: 10rem;
+}
+
 .business-buy{
   margin: 3rem;
 }
@@ -138,6 +143,24 @@ body {
     margin: -0.5rem;
     margin-top: 2rem;
   }
+}
+@media screen and (max-width: 667px) {
+.image-reward{
+  margin-bottom: -6rem;
+}
+.business-buy{
+  font-style: italic;
+}
+.visa-rewards-paragraph-p0{
+  margin: 0.1rem;
+}
+.visa-rewards-paragraph-p{
+  margin: 1rem;
+}
+.reward-card-image3{
+  width: 17rem;
+  margin: 2rem;
+}
 }
 
 

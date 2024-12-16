@@ -66,6 +66,9 @@ body {
 .brand {
   padding-right: 140px;
 }
+.hero-heading{
+  color: #212121;
+}
 
 
 /* Responsive Design */
@@ -81,7 +84,7 @@ body {
 
   .hero-heading{
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size:40px;
+    font-size:30px;
     color: rgb(2, 40, 55);
   }
   .hero-para{
@@ -131,6 +134,9 @@ body {
     width: 40px; /* Adjust logo size */
     height: 40px;
   }
+  .input-card{
+    margin-right: 4rem;
+    }
 }
 
 /* Small Screens (Phones) */
@@ -193,7 +199,7 @@ body {
   margin-top: 30px;
 } */
 
-@media screen and (max-width: 360px) {
+@media (max-width: 360px) {
   .hero-heading{
     font-size: 2rem
   }
@@ -227,6 +233,11 @@ body {
   
 }
 
+@media screen and (max-width: 667px) {
+  .input-card{
+    margin: 2rem;
+  }
+}  
 
 
 
@@ -235,8 +246,7 @@ body {
 
 body {
   margin: 0;
-  /* height: 100vh; */
-  background: linear-gradient(to bottom, white,white); /* Dark blue gradient */
+  background: linear-gradient(to bottom, white,white); 
 }
 
 .snow-container {
@@ -615,17 +625,26 @@ h1 {
 
 
 /* App.css */
-.container {
+/* .container {
   display: grid;
-  grid-template-columns: 1fr 2fr 1fr; /* 1:2:1 grid ratio */
-  gap: 20px; /* space between the grid items */
+  grid-template-columns: 1fr 2fr 1fr; 
+  gap: 20px; 
   padding: 150px;
   background: 
   linear-gradient(to bottom, skyblue, rgba(24, 22, 22, 0.5)),
-  url('/eGiftedImages/eGifted-background2.jpg');
+    url('eGiftedImages/bg-gifted.jpg');
 background-size: cover;
 background-repeat: no-repeat;
 
+} */
+
+
+.container {
+  background: 
+    url('eGiftedImages/bg-gifted.jpg');
+background-size: cover;
+background-repeat: no-repeat;
+height: full;
 }
 
 /*
@@ -648,11 +667,11 @@ background-repeat: no-repeat;
 
 
 @media (max-width: 768px) {
-  .container {
+  /* .container {
     grid-template-columns: 1fr;
     padding: 30px;
     margin-top: 60px;
-  }
+  } */
   .gift-img{
     padding-left: 50px;
   }
@@ -680,17 +699,30 @@ background-repeat: no-repeat;
     visibility: hidden;
     /* padding-left: 55px; */
   }
+  .social-media{
+    visibility: hidden;
+  }
+  .footer-img{
+   margin-top: 3rem;
+  }
 }
 
 
 /* Large screens (Desktops) */
 @media (min-width: 1024px) {
-  .container {
+  /* .container {
     grid-template-columns: 1fr 2fr 1fr;
-  }
+  } */
 
   .menu-icon {
     width: 35px;
     height: 20px;
   }
 }
+
+@media (min-width:375px){
+  .footer-image-social{
+    margin-top: 200px;
+  }
+}
+

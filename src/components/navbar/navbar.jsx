@@ -554,41 +554,30 @@ import "../../../src/App.css";
 
 
 
-import {Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Button } from "../ui/button";
 import { useEffect, useRef, useState } from "react";
 import "../../../src/App.css";
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 import { MenubarDemo } from "./Menu";
 
-
-// eslint-disable-next-line react/prop-types
 const Navbar = ({ cart }) => {
   const [isDrawerOpen, setDrawerOpen] = useState(false);
   const [userName, setUserName] = useState(null);
   const navigate = useNavigate();
-
-
   const sidebarRef = useRef(null);
-  const menuIconRef = useRef(null);
 
   useEffect(() => {
-    // Close sidebar if clicked outside
     const handleClickOutside = (event) => {
       if (sidebarRef.current && !sidebarRef.current.contains(event.target)) {
-        setDrawerOpen(false); // Close the sidebar
+        setDrawerOpen(false);
       }
     };
-
-    // Add event listener
     document.addEventListener("mousedown", handleClickOutside);
-
-    // Cleanup event listener when component is unmounted
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, []);
-
 
   useEffect(() => {
     const userData = JSON.parse(localStorage.getItem("userData"));
@@ -597,11 +586,8 @@ const Navbar = ({ cart }) => {
     }
   }, []);
 
-  // const toggleDrawer = () => {
-  //   setDrawerOpen(!isDrawerOpen);
-  // };
   const toggleDrawer = (event) => {
-    event.stopPropagation(); // Prevent click from propagating to the document
+    event.stopPropagation();
     setDrawerOpen((prevState) => !prevState);
   };
 
@@ -610,102 +596,441 @@ const Navbar = ({ cart }) => {
     setUserName(null);
   };
 
-  const showCart=()=>{
-
-    navigate("/cards")
-  }
-
+  const showCart = () => {
+    navigate("/cards");
+  };
 
   return (
     <div>
-      <nav className="bg-white shadow-md fixed top-0 left-0 w-full z-50 p-2">
-      <div className="max-w-7xl mx-auto px-4 sm:px-8 lg:px-8 flex items-center justify-between h-12 ">
-      <MenubarDemo className="menu-bar"/>
+      <nav className="bg-white shadow-md left-0 w-full z-50 p-2">
+        <div className="max-w-7xl mx-auto px-4 flex items-center justify-between h-12">
+          <MenubarDemo className="menu-bar" />
 
           {/* Logo */}
-          <Link to="/" className="">
+          <Link to="/" className="flex items-center">
             <img
-              src="/eGiftedImages/eGifter.svg"
-              className="h-8 w-auto ml-16 main-logo"
+              src="\eGiftedImages\logo-gifter-removebg-preview (1).png"
+              className="h-20 w-auto ml-2 mb-3"
               alt="Logo"
             />
           </Link>
 
-       
-
-
-          {/* Menu Icon in the center */}
+          {/* Hamburger Icon for Mobile */}
           <div
-           >
+            className="flex md:hidden cursor-pointer"
+            onClick={toggleDrawer}
+          >
+            <Button className="bg-blue-600">Profile</Button>
+            {/* <div className="w-6 h-5 bg-gray-700 mb-1"></div> */}
+            {/* <div className="w-6 h-5 bg-gray-700 mb-1"></div>
+            <div className="w-6 h-5 bg-gray-700"></div> */}
           </div>
-      {/* <div
-           className={`menu-icon ${isDrawerOpen ? "cross-icon" : ""}`}
-           onClick={toggleDrawer}
-           style={{
-            position: "absolute",
-            left: "50%",
-            transform: "translateX(-2000%)",
-          }}
-         >
-           <div></div>
-           <div></div>
-           <div></div>
-         </div>
-        <div className="max-w-7xl mx-auto px-4 sm:px-8 lg:px-8 flex items-center justify-between h-12">
-          <Link to="/">
-            <img src="/eGiftedImages/eGifter.svg" className="h-8 w-auto mb-6" alt="Logo" /> 
-          </Link> */}
 
-          <div className="hidden md:flex space-x-6 ">
-            <Link to="/cards" className="text-gray-700 hover:text-blue-500 font-medium">
+          {/* Links for larger screens */}
+          <div className="hidden md:flex space-x-6">
+            <Link
+              to="/cards"
+              className="text-gray-700 hover:text-blue-500 font-medium"
+            >
               Buy Gift Cards
             </Link>
-            <Link to="/businessBuy" className="text-gray-700 hover:text-blue-500 font-medium">
+            <Link
+              to="/businessBuy"
+              className="text-gray-700 hover:text-blue-500 font-medium"
+            >
               Buy For Business
             </Link>
-            <Link to="/crypto" className="text-gray-700 hover:text-blue-500 font-medium">
+            <Link
+              to="/crypto"
+              className="text-gray-700 hover:text-blue-500 font-medium"
+            >
               Buy For Crypto
             </Link>
           </div>
 
-          <div className="flex items-center space-x-4">
+          <div className="hidden md:flex items-center space-x-4">
             {userName ? (
-              <div className="flex items-center space-x-4 sign-out">
-                <span className="user-name rounded-full text-sm md:text-base">
+              <div className="flex items-center space-x-4">
+                <span className="rounded-full text-sm md:text-base">
                   Welcome, {userName}
                 </span>
-                <Button className="sign-out-btn rounded-full ml-4 text-sm md:text-base" onClick={handleSignOut}>
+                <Button
+                  className="rounded-full ml-4 text-sm md:text-base"
+                  onClick={handleSignOut}
+                >
                   Sign Out
                 </Button>
               </div>
             ) : (
               <Link to="/signin">
-                {/* <button className=" bg-blue-500 text-white px-4 py-2 rounded-full hover:bg-blue-600 transition sign-up">
-                  Sign Up
-                </button> */}
                 <Button>Sign up</Button>
               </Link>
             )}
+          </div>
+        </div>
 
-           
+        {/* Sidebar for mobile */}
+        <div
+          ref={sidebarRef}
+          className={`${
+            isDrawerOpen ? "block" : "hidden"
+          } bg-white shadow-md fixed top-12 left-0 w-full z-40 md:hidden`}
+        >
+          <div className="flex flex-col items-center space-y-4 py-4">
+            {/* <Link
+              to="/cards"
+              className="text-gray-700 hover:text-blue-500 font-medium"
+              onClick={() => setDrawerOpen(false)}
+            >
+              Buy Gift Cards
+            </Link>
+            <Link
+              to="/businessBuy"
+              className="text-gray-700 hover:text-blue-500 font-medium"
+              onClick={() => setDrawerOpen(false)}
+            >
+              Buy For Business
+            </Link>
+            <Link
+              to="/crypto"
+              className="text-gray-700 hover:text-blue-500 font-medium"
+              onClick={() => setDrawerOpen(false)}
+            >
+              Buy For Crypto
+            </Link> */}
+
+            {userName ? (
+              <div className="flex flex-col items-center space-y-4">
+                <span className="rounded-full text-sm md:text-base">
+                  Welcome, {userName}
+                </span>
+                <Button
+                  className="rounded-full text-sm md:text-base"
+                  onClick={handleSignOut}
+                >
+                  Sign Out
+                </Button>
+              </div>
+            ) : (
+              <Link to="/signin" onClick={() => setDrawerOpen(false)}>
+                <Button>Sign up</Button>
+              </Link>
+            )}
           </div>
         </div>
       </nav>
-      
     </div>
   );
 };
 
 Navbar.propTypes = {
-  cart: PropTypes.array, // Validate that `cart` is an array
+  cart: PropTypes.array,
 };
 
-// Optionally, you can also define defaultProps if needed
 Navbar.defaultProps = {
-  cart: [], // Default `cart` to an empty array if it's not passed
+  cart: [],
 };
 
 export default Navbar;
+
+
+
+
+
+const OfferBanner = () => {
+  const offers = [
+    { 
+      text: "Buy $100 Outback Gift Cards for $90!", 
+      image: "/eGiftedImages/cardCurrency.png",
+      bgColor: "bg-red-800"
+    },
+    {
+      text: "Get $50 Habitats Card for $45!",
+      image: "/cardsImage/1081483_fp01.png",
+      bgColor: "bg-black"
+    },
+    {
+      text: "Save 10% on Adiddas Gift Cards!",
+      image: "/eGiftedImages/currency_fp01.png",
+      bgColor: "bg-blue-800"
+    },
+    {
+      text: "Buy $200 WHsmith Gift Cards for $180!",
+      image: "/cardsImage/1073683_fp01.png",
+      bgColor: "bg-[#F26A24]"
+    }
+  ];
+
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  // Rotate offers every 2 seconds
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % offers.length);
+    }, 2000); 
+    return () => clearInterval(interval);
+  }, [offers.length]);
+
+  const currentOffer = offers[currentIndex];
+
+  return (
+    <div className={`w-full flex items-center justify-center text-white px-4 py-2 transition-all duration-300 ${currentOffer.bgColor}`}>
+      <img 
+        src={currentOffer.image} 
+        alt="Offer Logo" 
+        className="h-8 w-auto mr-3" 
+      />
+      <div className="text-sm md:text-base">
+        {currentOffer.text}
+      </div>
+    </div>
+  );
+};
+
+export { OfferBanner };
+
+
+
+
+// const OfferBanner = () => {
+//   // Array of offers. 
+//   // If each offer has its own image, store that in the object as well.
+//   const offers = [
+//     { 
+//       text: "Buy $100 Outback Gift Cards for $90!", 
+//       image: "/eGiftedImages/cardCurrency.png",
+//       color : "bg-black-800"
+//     },
+//     {
+//       text: "Get $50 Starbucks Card for $45!",
+//       image: "/eGiftedImages/cardStarbucks.png"
+//     },
+//     {
+//       text: "Save 10% on Amazon Gift Cards!",
+//       image: "/eGiftedImages/cardAmazon.png"
+//     },
+//     {
+//       text: "Buy $200 Apple Gift Cards for $180!",
+//       image: "/eGiftedImages/cardApple.png"
+//     }
+//   ];
+
+//   const [currentIndex, setCurrentIndex] = useState(0);
+
+//   // Rotate offers every 2 seconds
+//   useEffect(() => {
+//     const interval = setInterval(() => {
+//       setCurrentIndex((prevIndex) => (prevIndex + 1) % offers.length);
+//     }, 2000); // 2000 milliseconds = 2 seconds
+
+//     return () => clearInterval(interval);
+//   }, [offers.length]);
+
+//   const currentOffer = offers[currentIndex];
+
+//   return (
+//     <div className="w-full bg-red-800 flex items-center justify-center text-white px-4 py-2 transition-all duration-300">
+//       <img 
+//         src={currentOffer.image} 
+//         alt="Offer Logo" 
+//         className="h-8 w-auto mr-3" 
+//       />
+//       <div className="text-sm md:text-base">
+//         {currentOffer.text}
+//       </div>
+//     </div>
+//   );
+// };
+
+// export { OfferBanner };
+
+
+
+
+
+
+
+
+
+// const OfferBanner = () => {
+//   return (
+//     <div className="w-full bg-red-800 flex items-center justify-center text-white px-4 py-2">
+//       <img 
+//         src="/eGiftedImages/cardCurrency.png" 
+//         alt="Outback Logo" 
+//         className="h-8 w-auto mr-3" 
+//       />
+//       <div className="text-sm md:text-base">
+//         Buy $100 Outback Gift Cards for $90!
+//       </div>
+//     </div>
+//   );
+// };
+
+// export { OfferBanner };
+
+
+
+
+
+
+
+
+
+
+
+// import {Link, useNavigate } from "react-router-dom";
+// import { Button } from "../ui/button";
+// import { useEffect, useRef, useState } from "react";
+// import "../../../src/App.css";
+// import PropTypes from 'prop-types';
+// import { MenubarDemo } from "./Menu";
+
+
+// // eslint-disable-next-line react/prop-types
+// const Navbar = ({ cart }) => {
+//   const [isDrawerOpen, setDrawerOpen] = useState(false);
+//   const [userName, setUserName] = useState(null);
+//   const navigate = useNavigate();
+
+
+//   const sidebarRef = useRef(null);
+//   const menuIconRef = useRef(null);
+
+//   useEffect(() => {
+//     // Close sidebar if clicked outside
+//     const handleClickOutside = (event) => {
+//       if (sidebarRef.current && !sidebarRef.current.contains(event.target)) {
+//         setDrawerOpen(false); // Close the sidebar
+//       }
+//     };
+
+//     // Add event listener
+//     document.addEventListener("mousedown", handleClickOutside);
+
+//     // Cleanup event listener when component is unmounted
+//     return () => {
+//       document.removeEventListener("mousedown", handleClickOutside);
+//     };
+//   }, []);
+
+
+//   useEffect(() => {
+//     const userData = JSON.parse(localStorage.getItem("userData"));
+//     if (userData && userData.name) {
+//       setUserName(userData.name);
+//     }
+//   }, []);
+
+//   // const toggleDrawer = () => {
+//   //   setDrawerOpen(!isDrawerOpen);
+//   // };
+//   const toggleDrawer = (event) => {
+//     event.stopPropagation(); // Prevent click from propagating to the document
+//     setDrawerOpen((prevState) => !prevState);
+//   };
+
+//   const handleSignOut = () => {
+//     localStorage.removeItem("userData");
+//     setUserName(null);
+//   };
+
+//   const showCart=()=>{
+
+//     navigate("/cards")
+//   }
+
+
+//   return (
+//     <div>
+//       <nav className="bg-white shadow-md fixed top-0 left-0 w-full z-50 p-2">
+//       <div className="max-w-7xl mx-auto px-4 sm:px-8 lg:px-8 flex items-center justify-between h-12 ">
+//       <MenubarDemo className="menu-bar"/>
+
+//           {/* Logo */}
+//           <Link to="/" className="">
+//             <img
+//               src="/eGiftedImages/eGifter.svg"
+//               className="h-8 w-auto ml-16 main-logo"
+//               alt="Logo"
+//             />
+//           </Link>
+
+       
+
+
+//           {/* Menu Icon in the center */}
+//           <div
+//            >
+//           </div>
+//       {/* <div
+//            className={`menu-icon ${isDrawerOpen ? "cross-icon" : ""}`}
+//            onClick={toggleDrawer}
+//            style={{
+//             position: "absolute",
+//             left: "50%",
+//             transform: "translateX(-2000%)",
+//           }}
+//          >
+//            <div></div>
+//            <div></div>
+//            <div></div>
+//          </div>
+//         <div className="max-w-7xl mx-auto px-4 sm:px-8 lg:px-8 flex items-center justify-between h-12">
+//           <Link to="/">
+//             <img src="/eGiftedImages/eGifter.svg" className="h-8 w-auto mb-6" alt="Logo" /> 
+//           </Link> */}
+
+//           <div className="hidden md:flex space-x-6 ">
+//             <Link to="/cards" className="text-gray-700 hover:text-blue-500 font-medium">
+//               Buy Gift Cards
+//             </Link>
+//             <Link to="/businessBuy" className="text-gray-700 hover:text-blue-500 font-medium">
+//               Buy For Business
+//             </Link>
+//             <Link to="/crypto" className="text-gray-700 hover:text-blue-500 font-medium">
+//               Buy For Crypto
+//             </Link>
+//           </div>
+
+//           <div className="flex items-center space-x-4">
+//             {userName ? (
+//               <div className="flex items-center space-x-4 sign-out">
+//                 <span className="user-name rounded-full text-sm md:text-base">
+//                   Welcome, {userName}
+//                 </span>
+//                 <Button className="sign-out-btn rounded-full ml-4 text-sm md:text-base" onClick={handleSignOut}>
+//                   Sign Out
+//                 </Button>
+//               </div>
+//             ) : (
+//               <Link to="/signin">
+//                 {/* <button className=" bg-blue-500 text-white px-4 py-2 rounded-full hover:bg-blue-600 transition sign-up">
+//                   Sign Up
+//                 </button> */}
+//                 <Button>Sign up</Button>
+//               </Link>
+//             )}
+
+           
+//           </div>
+//         </div>
+//       </nav>
+      
+//     </div>
+//   );
+// };
+
+// Navbar.propTypes = {
+//   cart: PropTypes.array, // Validate that `cart` is an array
+// };
+
+// // Optionally, you can also define defaultProps if needed
+// Navbar.defaultProps = {
+//   cart: [], // Default `cart` to an empty array if it's not passed
+// };
+
+// export default Navbar;
 
 
 

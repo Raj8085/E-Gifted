@@ -14,3 +14,12 @@
         margin: 3rem;
     }
 }
+
+@media screen and (max-width: 667px) {
+    .count-down{
+        margin: 3rem;
+    }
+    .pay-description{
+        margin: 3rem;
+    }
+}
