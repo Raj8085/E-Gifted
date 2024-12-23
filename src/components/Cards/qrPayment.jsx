@@ -198,7 +198,7 @@ export function CardWithFormQr({ onBackToCart, price, quantity,name,brand }) {
             </CardHeader>
             <CardContent className="flex justify-center items-center py-4">
               <img
-                src="/eGiftedImages/Qrcode.png"
+                src="/eGiftedImages/scanner-e-gifter2.jpg"
                 alt="QR Code for Payment"
                 className="w-48 h-48"
               />

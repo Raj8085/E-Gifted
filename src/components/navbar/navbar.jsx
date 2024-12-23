@@ -554,17 +554,17 @@ import "../../../src/App.css";
 
 
 
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { Button } from "../ui/button";
 import { useEffect, useRef, useState } from "react";
 import "../../../src/App.css";
 import PropTypes from "prop-types";
 import { MenubarDemo } from "./Menu";
 
-const Navbar = ({ cart }) => {
+const Navbar = () => {
   const [isDrawerOpen, setDrawerOpen] = useState(false);
   const [userName, setUserName] = useState(null);
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
   const sidebarRef = useRef(null);
 
   useEffect(() => {
@@ -596,9 +596,9 @@ const Navbar = ({ cart }) => {
     setUserName(null);
   };
 
-  const showCart = () => {
-    navigate("/cards");
-  };
+  // const showCart = () => {
+  //   navigate("/cards");
+  // };
 
   return (
     <div>

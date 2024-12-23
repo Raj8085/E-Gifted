@@ -199,14 +199,14 @@ function SignIn() {
 
           {/* Social Login Options */}
           <div className="social-login-buttons">
-            <button className="social-button apple">
+            {/* <button className="social-button apple">
               <img
                 src="/socialMedia/apple-logo-black.svg"
                 alt=""
                 className="h-4 w-5"
               />
               <span>Sign in with Apple</span>
-            </button>
+            </button> */}
 
             <GoogleOAuthProvider
               clientId="YOUR_GOOGLE_CLIENT_ID"
@@ -226,7 +226,7 @@ function SignIn() {
               />
               <span>Sign in with Google</span>
             </button>
-            <button className="social-button facebook">
+            {/* <button className="social-button facebook">
               <img
                 src="/socialMedia/download (1).svg"
                 className="h-4 w-5"
@@ -241,7 +241,7 @@ function SignIn() {
                 alt=""
               />
               <span>Sign in with Amazon</span>
-            </button>
+            </button> */}
           </div>
         </div>
 
