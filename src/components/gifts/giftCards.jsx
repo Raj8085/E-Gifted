@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 // import "../../../src/App.css";
 
 // const GiftCards = () => {
